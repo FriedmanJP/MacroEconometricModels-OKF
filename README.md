@@ -7,7 +7,16 @@ knowledge bundle describing every feature and function of
 ## Status
 
 Complete. 39 `type: Feature` concepts across 12 domain directories,
-all human-reviewed and approved (`reviewed_by: chung9207`).
+all human-reviewed and approved (`verified: { by: human:chung9207 }`).
+
+Browse the rendered bundle at
+<https://api.friedman.jp/MacroEconometricModels-OKF/> — a self-contained
+OKF viewer (concept graph + detail panels) built with the vendored
+`reference_agent` visualizer from
+[open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format)
+(see [site/vendor/ATTRIBUTION.md](site/vendor/ATTRIBUTION.md)).
+Rebuild locally with `python3 site/build.py` (requires `pyyaml`); CI
+rebuilds and deploys to `gh-pages` on every `main` push.
 
 ## Layout
 

@@ -13,8 +13,7 @@ tags:
   - kalman
   - reproducibility
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/infrastructure
@@ -101,9 +100,9 @@ verify_decomposition(hd)
 
 # See also
 
-* [Data Management](data.md) - typed containers that feed every core routine
-* [Simulation (DGPs)](dgp.md) - population IRF/FEVD/HD moments validating this layer
-* [Visualization](plotting.md) - plots of IRF, FEVD, and HD results
+* [Data Management](/infrastructure/data.md) - typed containers that feed every core routine
+* [Simulation (DGPs)](/infrastructure/dgp.md) - population IRF/FEVD/HD moments validating this layer
+* [Visualization](/infrastructure/plotting.md) - plots of IRF, FEVD, and HD results
 * [Vector Autoregression](/multivariate/var.md) - the canonical consumer of core innovation accounting
 * [Bayesian VAR](/multivariate/bvar.md) - posterior draws behind the Bayesian methods
 * [Hypothesis Tests](/testing/teststat.md) - tests built on the HAC/long-run-variance toolkit

@@ -11,8 +11,8 @@ Checks, for every in-scope Markdown file under the bundle root:
 * in files named ``log.md``, every ``##`` heading is a ``YYYY-MM-DD`` date.
 
 Out of scope: ``README.md``, ``.agents/**``, ``.github/**``,
-``scripts/**`` (plus ``.git/**``). In CI (a clean checkout) the files on
-disk are exactly the tracked files.
+``scripts/**``, ``site/**`` (plus ``.git/**``). In CI (a clean checkout)
+the files on disk are exactly the tracked files.
 
 Usage: ``python scripts/validate_okf.py [bundle-root]``.
 Exit status is 0 on success, 1 on any failure.
@@ -37,7 +37,7 @@ LINK_RE = re.compile(r"\]\((/[^)\s]*)\)")
 LOG_HEADING_RE = re.compile(r"^##\s+(.*\S)\s*$")
 LOG_DATE_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:\s|$)")
 
-EXCLUDED_DIRS = {".git", ".agents", ".github", "scripts"}
+EXCLUDED_DIRS = {".git", ".agents", ".github", "scripts", "site"}
 
 
 def bundle_root() -> Path:

@@ -5,8 +5,7 @@ description: ACF/PACF, spectral density, cross-spectrum, frequency-domain filter
 resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/spectral
 tags: [spectral, acf, periodogram, coherence, filtering, diagnostics, univariate]
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/univariate

@@ -10,8 +10,7 @@ tags:
   - time-series
   - forecasting
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/multivariate
@@ -77,7 +76,7 @@ report(g)
 
 # See also
 
-* [Vector Autoregression](var.md) - stationary systems and the `to_var` target type
-* [Bayesian VAR](bvar.md) - shrinkage estimation of VAR dynamics
-* [Local Projections](lp.md) - direct impulse-response estimation without cointegration structure
-* [Factor Models](factor.md) - large-panel dimension reduction
+* [Vector Autoregression](/multivariate/var.md) - stationary systems and the `to_var` target type
+* [Bayesian VAR](/multivariate/bvar.md) - shrinkage estimation of VAR dynamics
+* [Local Projections](/multivariate/lp.md) - direct impulse-response estimation without cointegration structure
+* [Factor Models](/multivariate/factor.md) - large-panel dimension reduction

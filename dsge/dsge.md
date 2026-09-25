@@ -11,8 +11,7 @@ tags:
   - bayesian-estimation
   - heterogeneous-agents
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/dsge
@@ -133,7 +132,7 @@ result = irf(sol, 40)
 
 # See also
 
-* [Continuous-Time Heterogeneous Agents](ct.md) - HJB/KFE finite-difference Aiyagari and two-asset HANK
-* [Overlapping Generations](olg.md) - Blanchard perpetual youth and life-cycle OLG
+* [Continuous-Time Heterogeneous Agents](/dsge/ct.md) - HJB/KFE finite-difference Aiyagari and two-asset HANK
+* [Overlapping Generations](/dsge/olg.md) - Blanchard perpetual youth and life-cycle OLG
 * [State-Space Models (Unobserved Components, TVP)](/nonlinear-statespace/statespace.md) - Kalman filtering and RTS smoothing machinery underlying the DSGE likelihood and smoother
 * [Innovation Accounting](/multivariate/var.md) - IRF/FEVD/HD layer for VAR-family models

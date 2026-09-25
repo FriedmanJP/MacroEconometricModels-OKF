@@ -10,8 +10,7 @@ tags:
   - time-series
   - identification
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/multivariate
@@ -90,7 +89,7 @@ report(slp)
 
 # See also
 
-* [Vector Autoregression](var.md) - system-based impulse responses and the `compare_var_lp` baseline
-* [Bayesian VAR](bvar.md) - Bayesian impulse responses with credible bands
-* [Vector Error Correction Models](vecm.md) - impulse responses for cointegrated systems
-* [Factor Models](factor.md) - factor-augmented settings where LP responses apply
+* [Vector Autoregression](/multivariate/var.md) - system-based impulse responses and the `compare_var_lp` baseline
+* [Bayesian VAR](/multivariate/bvar.md) - Bayesian impulse responses with credible bands
+* [Vector Error Correction Models](/multivariate/vecm.md) - impulse responses for cointegrated systems
+* [Factor Models](/multivariate/factor.md) - factor-augmented settings where LP responses apply

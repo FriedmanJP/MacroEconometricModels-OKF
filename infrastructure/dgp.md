@@ -9,8 +9,7 @@ tags:
   - dgp
   - monte-carlo
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/infrastructure
@@ -86,8 +85,8 @@ maximum(abs.(est_irf - var_irf(sim.A, sim.B0, 10)))
 
 # See also
 
-* [Data Management](data.md) - observed datasets complementing simulated ones
-* [Shared Kernel](core.md) - innovation-accounting estimators the population moments validate
+* [Data Management](/infrastructure/data.md) - observed datasets complementing simulated ones
+* [Shared Kernel](/infrastructure/core.md) - innovation-accounting estimators the population moments validate
 * [Vector Autoregression](/multivariate/var.md) - OLS recovery on `dgp_var` draws
 * [ARIMA Models](/univariate/arima.md) - recovery on `dgp_arima` draws
 * [Hypothesis Tests](/testing/teststat.md) - size/power checks on `dgp_unit_root_pair`

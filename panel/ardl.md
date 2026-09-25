@@ -11,8 +11,7 @@ tags:
   - pmg
   - panel
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/panel
@@ -72,8 +71,8 @@ st = symmetry_test(nm)
 
 # See also
 
-* [Panel Regression](preg.md) - static and dynamic linear panel estimators
-* [Panel VAR](pvar.md) - multivariate dynamic panels
-* [Difference-in-Differences](did.md) - treatment-effect designs on panels
+* [Panel Regression](/panel/preg.md) - static and dynamic linear panel estimators
+* [Panel VAR](/panel/pvar.md) - multivariate dynamic panels
+* [Difference-in-Differences](/panel/did.md) - treatment-effect designs on panels
 * [Cointegrating Regression](/multivariate/cointreg.md) - FMOLS/CCR/DOLS single-equation cointegration
 * [Vector Error Correction Models](/multivariate/vecm.md) - system cointegration with multiple vectors

@@ -11,8 +11,7 @@ tags:
   - lp-did
   - honest-did
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/panel
@@ -72,8 +71,8 @@ report(h)
 
 # See also
 
-* [Panel Regression](preg.md) - panel models identified from covariates
-* [Panel VAR](pvar.md) - multivariate dynamic panels
-* [ARDL & Panel ARDL](ardl.md) - single-equation dynamics and PMG/MG/DFE
+* [Panel Regression](/panel/preg.md) - panel models identified from covariates
+* [Panel VAR](/panel/pvar.md) - multivariate dynamic panels
+* [ARDL & Panel ARDL](/panel/ardl.md) - single-equation dynamics and PMG/MG/DFE
 * [Local Projections](/multivariate/lp.md) - time-series LP impulse responses
 * [Panel Tests](/testing/teststat.md) - panel unit-root pretests

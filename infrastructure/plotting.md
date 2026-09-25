@@ -9,8 +9,7 @@ tags:
   - visualization
   - d3
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/infrastructure
@@ -55,8 +54,8 @@ save_plot(p, "irf_plot.html")
 
 # See also
 
-* [Data Management](data.md) - containers and the `:corr`/`:growth` views over them
-* [Shared Kernel](core.md) - IRF/FEVD/HD results that feed the plots
-* [Simulation (DGPs)](dgp.md) - synthetic samples for gallery-style exhibits
+* [Data Management](/infrastructure/data.md) - containers and the `:corr`/`:growth` views over them
+* [Shared Kernel](/infrastructure/core.md) - IRF/FEVD/HD results that feed the plots
+* [Simulation (DGPs)](/infrastructure/dgp.md) - synthetic samples for gallery-style exhibits
 * [Forecast Evaluation](/forecasting/fceval.md) - metric and Theil views of forecast comparisons
 * [Vector Autoregression](/multivariate/var.md) - the canonical plotted model

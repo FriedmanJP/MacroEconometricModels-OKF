@@ -10,8 +10,7 @@ tags:
   - time-series
   - shrinkage
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/multivariate
@@ -78,7 +77,7 @@ report(fc)
 
 # See also
 
-* [Vector Autoregression](var.md) - frequentist counterpart and summary-model type
-* [Vector Error Correction Models](vecm.md) - cointegrated systems
-* [Local Projections](lp.md) - non-Bayesian direct impulse-response estimation
-* [Factor Models](factor.md) - dimension reduction for large Bayesian systems
+* [Vector Autoregression](/multivariate/var.md) - frequentist counterpart and summary-model type
+* [Vector Error Correction Models](/multivariate/vecm.md) - cointegrated systems
+* [Local Projections](/multivariate/lp.md) - non-Bayesian direct impulse-response estimation
+* [Factor Models](/multivariate/factor.md) - dimension reduction for large Bayesian systems

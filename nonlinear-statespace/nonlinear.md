@@ -11,8 +11,7 @@ tags:
   - markov-switching
   - regime-switching
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/nonlinear-statespace

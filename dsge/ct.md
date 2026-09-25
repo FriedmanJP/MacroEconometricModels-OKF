@@ -10,8 +10,7 @@ tags:
   - hjb
   - hank
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/dsge
@@ -66,5 +65,5 @@ report(ss)
 
 # See also
 
-* [DSGE Models](dsge.md) - representative-agent pipeline and discrete-time heterogeneous agents
-* [Overlapping Generations](olg.md) - finite-horizon demographics and life-cycle saving
+* [DSGE Models](/dsge/dsge.md) - representative-agent pipeline and discrete-time heterogeneous agents
+* [Overlapping Generations](/dsge/olg.md) - finite-horizon demographics and life-cycle saving

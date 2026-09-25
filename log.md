@@ -34,3 +34,13 @@ description: Chronological history of changes to this OKF bundle.
 - License decision (Q2): bundle licensed under Apache License 2.0
   (`LICENSE`, copyright 2026 Wookyung Chung), matching the upstream
   open-knowledge-format project.
+- Normalized all concept cross-links to bundle-root-relative
+  (`/domain/concept.md`, the OKF viewer convention) and migrated
+  `reviewed_by`/`reviewed_at` to the spec `verified` key, so concepts
+  derive the `human-reviewed` trust tier (§5.3).
+- Added the static viewer site: `site/build.py` plus the vendored OKF
+  visualizer (`site/vendor/`, upstream `ad30107`, patched link
+  extraction and palette) render 41 concepts / 142 edges to a
+  self-contained `index.html`; `.github/workflows/site.yml` deploys it
+  to `gh-pages`, served at
+  `https://api.friedman.jp/MacroEconometricModels-OKF/`.

@@ -10,8 +10,7 @@ tags:
   - forecasting
   - identification
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/multivariate
@@ -71,8 +70,8 @@ report(result)
 
 # See also
 
-* [Bayesian VAR](bvar.md) - shrinkage estimation of the same VAR dynamics
-* [Vector Error Correction Models](vecm.md) - cointegrated I(1) systems
-* [Local Projections](lp.md) - horizon-by-horizon alternative to VAR-based IRFs
-* [Factor Models](factor.md) - large-panel dimension reduction feeding VARs
+* [Bayesian VAR](/multivariate/bvar.md) - shrinkage estimation of the same VAR dynamics
+* [Vector Error Correction Models](/multivariate/vecm.md) - cointegrated I(1) systems
+* [Local Projections](/multivariate/lp.md) - horizon-by-horizon alternative to VAR-based IRFs
+* [Factor Models](/multivariate/factor.md) - large-panel dimension reduction feeding VARs
 * [Factor-Augmented VAR](/multivariate/favar.md) - VARs augmented with latent factors

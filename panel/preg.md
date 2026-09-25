@@ -12,8 +12,7 @@ tags:
   - probit
   - hdfe
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/panel
@@ -73,8 +72,8 @@ m_final = estimate_xtreg(pd, :lngdppc, [:hc, :lnk];
 
 # See also
 
-* [Panel VAR](pvar.md) - multivariate dynamic panels with GMM
-* [Difference-in-Differences](did.md) - treatment-effect designs on panels
-* [ARDL & Panel ARDL](ardl.md) - dynamic heterogeneous panels (PMG/MG/DFE)
+* [Panel VAR](/panel/pvar.md) - multivariate dynamic panels with GMM
+* [Difference-in-Differences](/panel/did.md) - treatment-effect designs on panels
+* [ARDL & Panel ARDL](/panel/ardl.md) - dynamic heterogeneous panels (PMG/MG/DFE)
 * [Cross-Section Regression](/cross-section/reg.md) - non-panel OLS/IV/discrete choice
 * [Panel Tests](/testing/teststat.md) - panel unit-root and cointegration pretests

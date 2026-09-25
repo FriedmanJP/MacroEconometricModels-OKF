@@ -11,8 +11,7 @@ tags:
   - fred
   - transforms
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/infrastructure
@@ -97,9 +96,9 @@ report(model)
 
 # See also
 
-* [Shared Kernel](core.md) - reproducibility, persistence, and tabular exports for containers
-* [Simulation (DGPs)](dgp.md) - synthetic samples for Monte Carlo checks
-* [Visualization](plotting.md) - container views (`:line`, `:corr`, panel views)
+* [Shared Kernel](/infrastructure/core.md) - reproducibility, persistence, and tabular exports for containers
+* [Simulation (DGPs)](/infrastructure/dgp.md) - synthetic samples for Monte Carlo checks
+* [Visualization](/infrastructure/plotting.md) - container views (`:line`, `:corr`, panel views)
 * [Vector Autoregression](/multivariate/var.md) - estimation straight from a container
 * [Difference-in-Differences](/panel/did.md) - consumer of panel cohorts
 * [Input-Output Analysis](/io/io.md) - home of the `:wiot` example dataset

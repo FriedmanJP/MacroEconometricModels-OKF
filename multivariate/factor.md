@@ -10,8 +10,7 @@ tags:
   - forecasting
   - dimension-reduction
 status: approved
-reviewed_by: chung9207
-reviewed_at: 2026-09-25
+verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/multivariate
@@ -88,8 +87,8 @@ report(fc)
 
 # See also
 
-* [Vector Autoregression](var.md) - small-system dynamics behind factor-augmented VARs
-* [Bayesian VAR](bvar.md) - shrinkage alternative for medium-scale systems
-* [Vector Error Correction Models](vecm.md) - cointegration structure factors do not impose
-* [Local Projections](lp.md) - direct responses usable alongside factor compression
+* [Vector Autoregression](/multivariate/var.md) - small-system dynamics behind factor-augmented VARs
+* [Bayesian VAR](/multivariate/bvar.md) - shrinkage alternative for medium-scale systems
+* [Vector Error Correction Models](/multivariate/vecm.md) - cointegration structure factors do not impose
+* [Local Projections](/multivariate/lp.md) - direct responses usable alongside factor compression
 * [Factor-Augmented VAR](/multivariate/favar.md) - VARs on observed plus latent factors
