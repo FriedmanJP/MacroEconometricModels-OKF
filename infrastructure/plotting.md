@@ -54,8 +54,8 @@ save_plot(p, "irf_plot.html")
 
 # See also
 
-* [Data Management](/infrastructure/data.md) - containers and the `:corr`/`:growth` views over them
-* [Shared Kernel](/infrastructure/core.md) - IRF/FEVD/HD results that feed the plots
-* [Simulation (DGPs)](/infrastructure/dgp.md) - synthetic samples for gallery-style exhibits
-* [Forecast Evaluation](/forecasting/fceval.md) - metric and Theil views of forecast comparisons
-* [Vector Autoregression](/multivariate/var.md) - the canonical plotted model
+* [Data Management](data.md) - containers and the `:corr`/`:growth` views over them
+* [Shared Kernel](core.md) - IRF/FEVD/HD results that feed the plots
+* [Simulation (DGPs)](dgp.md) - synthetic samples for gallery-style exhibits
+* [Forecast Evaluation](../forecasting/fceval.md) - metric and Theil views of forecast comparisons
+* [Vector Autoregression](../multivariate/var.md) - the canonical plotted model

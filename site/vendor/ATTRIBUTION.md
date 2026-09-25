@@ -10,17 +10,44 @@ the static viewer).
 Upstream paths:
 
 - `src/reference_agent/viewer/generator.py`
-- `src/reference_agent/viewer/templates/viz.html` (unmodified)
-- `src/reference_agent/viewer/static/viz.js` (unmodified)
-- `src/reference_agent/viewer/static/viz.css` (unmodified)
+- `src/reference_agent/viewer/templates/viz.html`
+- `src/reference_agent/viewer/static/viz.js`
+- `src/reference_agent/viewer/static/viz.css`
 - `src/reference_agent/bundle/document.py` (unmodified)
 
-Local patches to `viewer/generator.py` only:
+Local patches (each marked with a `FriedmanJP/MacroEconometricModels-OKF`
+comment at the edit site):
+
+`viewer/generator.py`:
 
 1. Import `bundle.document` instead of `reference_agent.bundle.document`
    (vendored layout).
 2. `_extract_links` resolves bundle-root-relative (`/...`) links against
    the bundle root so cross-domain links become graph edges; upstream
-   skips them (the viewer JS already navigates `/...` links in-concept).
+   skips them.
 3. `_TYPE_PALETTE` gains colors for this bundle's `Feature` and `Package`
    types.
+4. Nodes carry a `domain` (top-level directory) for the domain filter.
+5. `generate_visualization` takes `repo_url` and fills `__BUNDLE_REPO__`
+   for per-concept view-source links.
+
+`viewer/templates/viz.html`:
+
+6. Viewport meta tag for narrow screens.
+7. Domain-filter `<select>` in the controls.
+8. View-source row in the detail panel.
+9. `window.BUNDLE_REPO` placeholder.
+
+`viewer/static/viz.js`:
+
+10. CDN-load guard rendering a notice instead of a dead page.
+11. Domain filter population and handler.
+12. Search covers description and body text (precomputed index).
+13. Internal-link rewiring resolves relative (`x.md`, `../x.md`) links
+    against the current concept and tolerates `#fragments`; internal
+    hrefs use `#/concept/<id>` instead of `javascript:void(0)`.
+
+`viewer/static/viz.css`:
+
+14. `.status-approved` badge style (this bundle's review status).
+15. Responsive stacking of the graph/detail panes below 900px.

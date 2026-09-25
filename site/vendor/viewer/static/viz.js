@@ -12,6 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 (function () {
+  // FriedmanJP/MacroEconometricModels-OKF: graceful notice when the CDN
+  // libraries (cytoscape/marked) fail to load instead of a dead page.
+  if (typeof cytoscape === "undefined" || typeof marked === "undefined") {
+    document.getElementById("graph").innerHTML =
+      "<p class='muted' style='padding:24px'>Viewer libraries failed to load. " +
+      "This page needs network access to cdn.jsdelivr.net for Cytoscape.js and marked.js.</p>";
+    return;
+  }
   const bundle = window.BUNDLE;
   const bundleName = window.BUNDLE_NAME;
   document.title = `${bundleName} — OKF Viewer`;
@@ -25,6 +33,30 @@
     opt.textContent = t;
     typeSelect.appendChild(opt);
   }
+
+  // FriedmanJP/MacroEconometricModels-OKF: domain filter. Domains are the
+  // top-level bundle directories (root concepts group under "(root)").
+  const domains = [...new Set(bundle.nodes.map((n) => n.data.domain || "(root)"))].sort();
+  const domainSelect = document.getElementById("filter-domain");
+  for (const d of domains) {
+    const opt = document.createElement("option");
+    opt.value = d;
+    opt.textContent = d;
+    domainSelect.appendChild(opt);
+  }
+  domainSelect.addEventListener("change", (e) => {
+    const t = e.target.value;
+    if (!t) {
+      cy.elements().removeClass("dim");
+      return;
+    }
+    cy.nodes().forEach((n) => {
+      n.toggleClass("dim", (n.data("domain") || "(root)") !== t);
+    });
+    cy.edges().forEach((edge) => {
+      edge.toggleClass("dim", edge.source().hasClass("dim") || edge.target().hasClass("dim"));
+    });
+  });
 
   // Build reverse-link index for backlinks
   const backlinks = {};
@@ -121,6 +153,17 @@
     clearSelection();
   });
 
+  // FriedmanJP/MacroEconometricModels-OKF: search covers description and
+  // body text too (precomputed once), so function and method names match.
+  const searchIndex = {};
+  for (const n of bundle.nodes) {
+    const d = n.data;
+    searchIndex[d.id] = (
+      (d.label || "") + " " + d.id + " " +
+      (d.tags || []).join(" ") + " " + (d.description || "") + " " +
+      (bundle.bodies[d.id] || "")
+    ).toLowerCase();
+  }
   document.getElementById("search").addEventListener("input", (e) => {
     const q = e.target.value.trim().toLowerCase();
     if (!q) {
@@ -128,12 +171,7 @@
       return;
     }
     cy.nodes().forEach((n) => {
-      const d = n.data();
-      const hay =
-        (d.label || "").toLowerCase() + " " +
-        d.id.toLowerCase() + " " +
-        (d.tags || []).join(" ").toLowerCase();
-      n.toggleClass("dim", !hay.includes(q));
+      n.toggleClass("dim", !searchIndex[n.id()].includes(q));
     });
     cy.edges().forEach((edge) => {
       const src = edge.source();
@@ -263,7 +301,21 @@
     const html = marked.parse(body, { breaks: false, gfm: true });
     const bodyEl = document.getElementById("detail-body");
     bodyEl.innerHTML = html;
-    rewriteInternalLinks(bodyEl);
+    rewriteInternalLinks(bodyEl, conceptId);
+
+    // FriedmanJP/MacroEconometricModels-OKF: view-source link to the
+    // concept file in the bundle repository (hidden when unconfigured).
+    const srcDt = document.getElementById("detail-source-dt");
+    const srcDd = document.getElementById("detail-source-dd");
+    const srcLink = document.getElementById("detail-source");
+    if (window.BUNDLE_REPO) {
+      srcDt.hidden = false;
+      srcDd.hidden = false;
+      srcLink.href = window.BUNDLE_REPO + conceptId + ".md";
+    } else {
+      srcDt.hidden = true;
+      srcDd.hidden = true;
+    }
 
     const bl = backlinks[conceptId] || [];
     const blSection = document.getElementById("detail-backlinks");
@@ -303,21 +355,41 @@
     return event.at ? `${event.by} · ${event.at}` : String(event.by);
   }
 
-  function rewriteInternalLinks(root) {
+  // FriedmanJP/MacroEconometricModels-OKF: resolve a body href against the
+  // current concept's directory (supports bundle-rooted /x.md and relative
+  // x.md / ../x.md links, with optional #fragments).
+  function resolveConceptHref(href, conceptId) {
+    if (!href || /^(?:[a-z]+:)?\/\//i.test(href) || href.startsWith("#")) return null;
+    const path = href.split("#", 1)[0].split("?", 1)[0];
+    if (!path.endsWith(".md")) return null;
+    let full;
+    if (path.startsWith("/")) {
+      full = path.slice(1, -3);
+    } else {
+      const dir = conceptId.includes("/") ? conceptId.slice(0, conceptId.lastIndexOf("/")) : "";
+      full = (dir ? dir + "/" : "") + path.slice(0, -3);
+    }
+    const parts = [];
+    for (const seg of full.split("/")) {
+      if (seg === "" || seg === ".") continue;
+      if (seg === "..") parts.pop();
+      else parts.push(seg);
+    }
+    return parts.join("/");
+  }
+
+  function rewriteInternalLinks(root, conceptId) {
     root.querySelectorAll("a[href]").forEach((a) => {
       const href = a.getAttribute("href");
-      if (!href) return;
-      if (href.startsWith("/") && href.endsWith(".md")) {
-        const target = href.slice(1, -3);
-        if (nodeIndex[target]) {
-          a.className = "internal";
-          a.setAttribute("href", "javascript:void(0)");
-          a.addEventListener("click", (e) => {
-            e.preventDefault();
-            showDetail(target);
-          });
-          return;
-        }
+      const target = resolveConceptHref(href, conceptId);
+      if (target && nodeIndex[target]) {
+        a.className = "internal";
+        a.setAttribute("href", "#/concept/" + target);
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          showDetail(target);
+        });
+        return;
       }
       a.className = "external";
       a.setAttribute("target", "_blank");

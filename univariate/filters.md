@@ -55,7 +55,7 @@ std(cycle(hp))
 
 # See also
 
-* [X-13ARIMA-SEATS](/univariate/x13.md) - Removes the seasonal component rather than the trend.
-* [Spectral Analysis](/univariate/spectral.md) - `transfer_function` plots each filter's frequency response.
-* [ARIMA Models](/univariate/arima.md) - Beveridge-Nelson selects its ARMA order via `auto_arima`.
-* [MacroEconometricModels.jl overview](/overview.md) - Package feature map.
+* [X-13ARIMA-SEATS](x13.md) - Removes the seasonal component rather than the trend.
+* [Spectral Analysis](spectral.md) - `transfer_function` plots each filter's frequency response.
+* [ARIMA Models](arima.md) - Beveridge-Nelson selects its ARMA order via `auto_arima`.
+* [MacroEconometricModels.jl overview](../overview.md) - Package feature map.

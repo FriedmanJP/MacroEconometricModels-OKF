@@ -72,8 +72,8 @@ m_final = estimate_xtreg(pd, :lngdppc, [:hc, :lnk];
 
 # See also
 
-* [Panel VAR](/panel/pvar.md) - multivariate dynamic panels with GMM
-* [Difference-in-Differences](/panel/did.md) - treatment-effect designs on panels
-* [ARDL & Panel ARDL](/panel/ardl.md) - dynamic heterogeneous panels (PMG/MG/DFE)
-* [Cross-Section Regression](/cross-section/reg.md) - non-panel OLS/IV/discrete choice
-* [Panel Tests](/testing/teststat.md) - panel unit-root and cointegration pretests
+* [Panel VAR](pvar.md) - multivariate dynamic panels with GMM
+* [Difference-in-Differences](did.md) - treatment-effect designs on panels
+* [ARDL & Panel ARDL](ardl.md) - dynamic heterogeneous panels (PMG/MG/DFE)
+* [Cross-Section Regression](../cross-section/reg.md) - non-panel OLS/IV/discrete choice
+* [Panel Tests](../testing/teststat.md) - panel unit-root and cointegration pretests

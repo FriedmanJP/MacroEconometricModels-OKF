@@ -105,6 +105,7 @@ report(m)
 
 # See also
 
-* [Systems of Equations (SUR and 3SLS)](/cross-section/system.md) - joint estimation of multi-equation systems with correlated errors
-* [Panel Regression](/panel/preg.md) - fixed/random-effects, panel IV, and panel logit/probit counterparts
-* [Difference-in-Differences](/panel/did.md) - treatment-effect designs that use few-cluster bootstrap inference
+* [Systems of Equations (SUR and 3SLS)](system.md) - joint estimation of multi-equation systems with correlated errors
+* [Panel Regression](../panel/preg.md) - fixed/random-effects, panel IV, and panel logit/probit counterparts
+* [Difference-in-Differences](../panel/did.md) - treatment-effect designs that use few-cluster bootstrap inference
+* [Nonparametric Regression and Density](../nonparametric/nonparametric.md) - kernel and LOWESS alternatives without parametric form

@@ -71,8 +71,9 @@ decomp = pvar_fevd(model, 10)
 
 # See also
 
-* [Panel Regression](/panel/preg.md) - single-equation FE/RE/IV and Arellano-Bond estimators
-* [Difference-in-Differences](/panel/did.md) - treatment-effect designs on panels
-* [ARDL & Panel ARDL](/panel/ardl.md) - single-equation dynamics and PMG/MG/DFE
-* [Vector Autoregression](/multivariate/var.md) - time-series VAR without the panel dimension
-* [Panel Tests](/testing/teststat.md) - panel unit-root pretests before PVAR estimation
+* [Panel Regression](preg.md) - single-equation FE/RE/IV and Arellano-Bond estimators
+* [Difference-in-Differences](did.md) - treatment-effect designs on panels
+* [ARDL & Panel ARDL](ardl.md) - single-equation dynamics and PMG/MG/DFE
+* [Vector Autoregression](../multivariate/var.md) - time-series VAR without the panel dimension
+* [Panel Tests](../testing/teststat.md) - panel unit-root pretests before PVAR estimation
+* [GMM/SMM](../infrastructure/gmm.md) - one-step/optimal/two-step GMM machinery behind Arellano-Bond and system estimation

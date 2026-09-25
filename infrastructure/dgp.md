@@ -85,8 +85,8 @@ maximum(abs.(est_irf - var_irf(sim.A, sim.B0, 10)))
 
 # See also
 
-* [Data Management](/infrastructure/data.md) - observed datasets complementing simulated ones
-* [Shared Kernel](/infrastructure/core.md) - innovation-accounting estimators the population moments validate
-* [Vector Autoregression](/multivariate/var.md) - OLS recovery on `dgp_var` draws
-* [ARIMA Models](/univariate/arima.md) - recovery on `dgp_arima` draws
-* [Hypothesis Tests](/testing/teststat.md) - size/power checks on `dgp_unit_root_pair`
+* [Data Management](data.md) - observed datasets complementing simulated ones
+* [Shared Kernel](core.md) - innovation-accounting estimators the population moments validate
+* [Vector Autoregression](../multivariate/var.md) - OLS recovery on `dgp_var` draws
+* [ARIMA Models](../univariate/arima.md) - recovery on `dgp_arima` draws
+* [Hypothesis Tests](../testing/teststat.md) - size/power checks on `dgp_unit_root_pair`

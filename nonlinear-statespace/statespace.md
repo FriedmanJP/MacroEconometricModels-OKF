@@ -64,7 +64,7 @@ fc = forecast(m, 5)
 
 # See also
 
-- /nonlinear-statespace/nonlinear.md
-- /univariate/arima.md
-- /forecasting/nowcast.md
-- /multivariate/var.md
+* [Nonlinear Time Series](nonlinear.md) - regime-switching extensions of linear dynamics
+* [ARIMA Models](../univariate/arima.md) - classical univariate benchmark
+* [Nowcasting Mixed-Frequency Data](../forecasting/nowcast.md) - Kalman-filter forecasting on ragged-edge panels
+* [Vector Autoregression (VAR)](../multivariate/var.md) - multivariate linear dynamics

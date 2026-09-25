@@ -91,8 +91,8 @@ report(fc)
 
 # See also
 
-* [Vector Autoregression](/multivariate/var.md) - small-system dynamics behind factor-augmented VARs
-* [Bayesian VAR](/multivariate/bvar.md) - shrinkage alternative for medium-scale systems
-* [Vector Error Correction Models](/multivariate/vecm.md) - cointegration structure factors do not impose
-* [Local Projections](/multivariate/lp.md) - direct responses usable alongside factor compression
-* [Factor-Augmented VAR](/multivariate/favar.md) - VARs on observed plus latent factors
+* [Vector Autoregression](var.md) - small-system dynamics behind factor-augmented VARs
+* [Bayesian VAR](bvar.md) - shrinkage alternative for medium-scale systems
+* [Vector Error Correction Models](vecm.md) - cointegration structure factors do not impose
+* [Local Projections](lp.md) - direct responses usable alongside factor compression
+* [Factor-Augmented VAR](favar.md) - VARs on observed plus latent factors

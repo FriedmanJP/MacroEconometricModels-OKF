@@ -76,8 +76,8 @@ report(news)
 
 # See also
 
-- /forecasting/fceval.md
-- /multivariate/factor.md
-- /multivariate/bvar.md
-- /multivariate/midas.md
-- /infrastructure/data.md
+* [Forecast Evaluation and Combination](fceval.md) - accuracy metrics and tests for the nowcast path
+* [Factor Models](../multivariate/factor.md) - factor extraction behind the DFM nowcaster
+* [Bayesian VAR (BVAR)](../multivariate/bvar.md) - shrinkage machinery behind the large-BVAR nowcaster
+* [MIDAS Regression](../multivariate/midas.md) - single-indicator mixed-frequency alternative
+* [Data Management](../infrastructure/data.md) - containers and panel ops feeding the ragged-edge layout

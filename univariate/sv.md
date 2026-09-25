@@ -54,6 +54,6 @@ report(fc)
 
 # See also
 
-* [ARCH Models](/univariate/arch.md) - Observation-driven conditional variance foundation.
-* [GARCH Models](/univariate/garch.md) - EGARCH and GJR-GARCH leverage counterparts to SV leverage.
-* [MacroEconometricModels.jl overview](/overview.md) - Package feature map.
+* [ARCH Models](arch.md) - Observation-driven conditional variance foundation.
+* [GARCH Models](garch.md) - EGARCH and GJR-GARCH leverage counterparts to SV leverage.
+* [MacroEconometricModels.jl overview](../overview.md) - Package feature map.

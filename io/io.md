@@ -118,4 +118,4 @@ footprint(io, "CO2")
 
 # See also
 
-* [Data Management](/infrastructure/data.md) - home of the `:wiot` example table and container conventions
+* [Data Management](../infrastructure/data.md) - home of the `:wiot` example table and container conventions

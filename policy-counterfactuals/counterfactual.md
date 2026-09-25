@@ -112,7 +112,7 @@ report(pc)
 
 # See also
 
-* [Vector Autoregression (VAR)](/multivariate/var.md) - reduced-form IRFs feeding empirical causal-effect containers
-* [Bayesian VAR (BVAR)](/multivariate/bvar.md) - posterior IRF draws for uncertainty bands
-* [Local Projections (LP)](/multivariate/lp.md) - direct IRF estimates as policy menus
-* [DSGE](/dsge/dsge.md) - linear model news menus and laboratory validation
+* [Vector Autoregression (VAR)](../multivariate/var.md) - reduced-form IRFs feeding empirical causal-effect containers
+* [Bayesian VAR (BVAR)](../multivariate/bvar.md) - posterior IRF draws for uncertainty bands
+* [Local Projections (LP)](../multivariate/lp.md) - direct IRF estimates as policy menus
+* [DSGE](../dsge/dsge.md) - linear model news menus and laboratory validation

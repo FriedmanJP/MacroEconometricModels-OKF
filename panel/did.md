@@ -71,8 +71,8 @@ report(h)
 
 # See also
 
-* [Panel Regression](/panel/preg.md) - panel models identified from covariates
-* [Panel VAR](/panel/pvar.md) - multivariate dynamic panels
-* [ARDL & Panel ARDL](/panel/ardl.md) - single-equation dynamics and PMG/MG/DFE
-* [Local Projections](/multivariate/lp.md) - time-series LP impulse responses
-* [Panel Tests](/testing/teststat.md) - panel unit-root pretests
+* [Panel Regression](preg.md) - panel models identified from covariates
+* [Panel VAR](pvar.md) - multivariate dynamic panels
+* [ARDL & Panel ARDL](ardl.md) - single-equation dynamics and PMG/MG/DFE
+* [Local Projections](../multivariate/lp.md) - time-series LP impulse responses
+* [Panel Tests](../testing/teststat.md) - panel unit-root pretests

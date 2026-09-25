@@ -101,9 +101,9 @@ verify_decomposition(hd)
 
 # See also
 
-* [Data Management](/infrastructure/data.md) - typed containers that feed every core routine
-* [Simulation (DGPs)](/infrastructure/dgp.md) - population IRF/FEVD/HD moments validating this layer
-* [Visualization](/infrastructure/plotting.md) - plots of IRF, FEVD, and HD results
-* [Vector Autoregression](/multivariate/var.md) - the canonical consumer of core innovation accounting
-* [Bayesian VAR](/multivariate/bvar.md) - posterior draws behind the Bayesian methods
-* [Hypothesis Tests](/testing/teststat.md) - tests built on the HAC/long-run-variance toolkit
+* [Data Management](data.md) - typed containers that feed every core routine
+* [Simulation (DGPs)](dgp.md) - population IRF/FEVD/HD moments validating this layer
+* [Visualization](plotting.md) - plots of IRF, FEVD, and HD results
+* [Vector Autoregression](../multivariate/var.md) - the canonical consumer of core innovation accounting
+* [Bayesian VAR](../multivariate/bvar.md) - posterior draws behind the Bayesian methods
+* [Hypothesis Tests](../testing/teststat.md) - tests built on the HAC/long-run-variance toolkit

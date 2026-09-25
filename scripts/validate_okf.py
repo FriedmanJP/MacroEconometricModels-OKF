@@ -6,8 +6,10 @@ Checks, for every in-scope Markdown file under the bundle root:
 * parseable YAML frontmatter with a non-empty ``type`` key, except that
   files named ``index.md`` must carry NO frontmatter (the root
   ``index.md`` may carry only ``okf_version``);
-* every bundle-relative link ``]( /... )`` resolves to an existing file
-  (a directory link resolves when ``<dir>/index.md`` exists);
+* every local link (bundle-rooted ``]( /... )`` or relative ``]( ../x.md )``)
+  resolves to an existing file (a directory link resolves when
+  ``<dir>/index.md`` exists; external URLs and pure fragment links are
+  skipped);
 * in files named ``log.md``, every ``##`` heading is a ``YYYY-MM-DD`` date.
 
 Out of scope: ``README.md``, ``.agents/**``, ``.github/**``,
@@ -33,7 +35,8 @@ except ImportError:  # pragma: no cover
     )
     sys.exit(2)
 
-LINK_RE = re.compile(r"\]\((/[^)\s]*)\)")
+LINK_RE = re.compile(r"\]\(([^)\s]+)\)")
+SKIP_LINK_PREFIXES = ("http://", "https://", "mailto:", "#")
 LOG_HEADING_RE = re.compile(r"^##\s+(.*\S)\s*$")
 LOG_DATE_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:\s|$)")
 
@@ -104,17 +107,23 @@ def check_frontmatter(rel: str, fm, has_block: bool, errors: list[str]) -> None:
         )
 
 
-def resolve_link(root: Path, target: str) -> bool:
-    target = target.split("#", 1)[0].split("?", 1)[0]
-    if not target.startswith("/"):
+def resolve_link(root: Path, src_rel: str, target: str) -> bool:
+    if target.startswith(SKIP_LINK_PREFIXES):
         return True
-    rel = target[1:]
-    candidate = root / rel
+    target = target.split("#", 1)[0].split("?", 1)[0]
+    if not target:
+        return True
+    if target.startswith("/"):
+        candidate = root / target[1:]
+    else:
+        candidate = root / Path(src_rel).parent / target
     if candidate.is_file():
         return True
     if candidate.is_dir() and (candidate / "index.md").is_file():
         return True
-    if not rel.endswith(".md") and (root / (rel + ".md")).is_file():
+    stem = target[1:] if target.startswith("/") else target
+    base = root if target.startswith("/") else root / Path(src_rel).parent
+    if not stem.endswith(".md") and (base / (stem + ".md")).is_file():
         return True
     return False
 
@@ -123,9 +132,9 @@ def check_links(rel: str, text: str, root: Path, errors: list[str]) -> None:
     for lineno, line in enumerate(text.split("\n"), start=1):
         for match in LINK_RE.finditer(line):
             target = match.group(1)
-            if not resolve_link(root, target):
+            if not resolve_link(root, rel, target):
                 errors.append(
-                    f"{rel}:{lineno}: bundle-relative link {target} "
+                    f"{rel}:{lineno}: link {target} "
                     f"does not resolve to an existing file"
                 )
 

@@ -132,7 +132,7 @@ result = irf(sol, 40)
 
 # See also
 
-* [Continuous-Time Heterogeneous Agents](/dsge/ct.md) - HJB/KFE finite-difference Aiyagari and two-asset HANK
-* [Overlapping Generations](/dsge/olg.md) - Blanchard perpetual youth and life-cycle OLG
-* [State-Space Models (Unobserved Components, TVP)](/nonlinear-statespace/statespace.md) - Kalman filtering and RTS smoothing machinery underlying the DSGE likelihood and smoother
-* [Innovation Accounting](/multivariate/var.md) - IRF/FEVD/HD layer for VAR-family models
+* [Continuous-Time Heterogeneous Agents](ct.md) - HJB/KFE finite-difference Aiyagari and two-asset HANK
+* [Overlapping Generations](olg.md) - Blanchard perpetual youth and life-cycle OLG
+* [State-Space Models (Unobserved Components, TVP)](../nonlinear-statespace/statespace.md) - Kalman filtering and RTS smoothing machinery underlying the DSGE likelihood and smoother
+* [Innovation Accounting](../multivariate/var.md) - IRF/FEVD/HD layer for VAR-family models

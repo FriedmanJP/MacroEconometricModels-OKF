@@ -36,18 +36,18 @@ suite of specification and hypothesis tests.
 
 | Domain | Contents |
 |---|---|
-| [Univariate](/univariate/) | ARIMA, ARCH/GARCH, stochastic volatility, filters, X-13, spectral analysis |
-| [Nonlinear & state-space](/nonlinear-statespace/) | Threshold/STAR/Markov-switching, state-space, TVP regression |
-| [Multivariate](/multivariate/) | VAR, VECM, BVAR, local projections, factor models, MGARCH |
-| [Panel](/panel/) | Panel VAR, panel regression/IV, panel ARDL, DiD, event studies |
-| [DSGE](/dsge/) | Model specification, solvers, estimation, HA/CT models, OLG |
-| [Input-output](/io/) | IO tables, multipliers, linkages, decomposition, production networks |
-| [Policy counterfactuals](/policy-counterfactuals/) | Rule counterfactuals, OPP, model banks, menus |
-| [Cross-section](/cross-section/) | OLS/IV, penalized/robust regression, LDV, discrete choice |
-| [Nonparametric](/nonparametric/) | KDE, kernel/local-polynomial regression, LOWESS |
-| [Forecasting](/forecasting/) | Forecasting, forecast evaluation/combination, nowcasting |
-| [Testing](/testing/) | Unit-root, cointegration, break, and diagnostic tests |
-| [Infrastructure](/infrastructure/) | Core utilities, data, DGP simulation, GMM, plotting |
+| [Univariate](univariate/arima.md) | ARIMA, ARCH/GARCH, stochastic volatility, filters, X-13, spectral analysis |
+| [Nonlinear & state-space](nonlinear-statespace/nonlinear.md) | Threshold/STAR/Markov-switching, state-space, TVP regression |
+| [Multivariate](multivariate/var.md) | VAR, VECM, BVAR, local projections, factor models, MGARCH |
+| [Panel](panel/pvar.md) | Panel VAR, panel regression/IV, panel ARDL, DiD, event studies |
+| [DSGE](dsge/dsge.md) | Model specification, solvers, estimation, HA/CT models, OLG |
+| [Input-output](io/io.md) | IO tables, multipliers, linkages, decomposition, production networks |
+| [Policy counterfactuals](policy-counterfactuals/counterfactual.md) | Rule counterfactuals, OPP, model banks, menus |
+| [Cross-section](cross-section/reg.md) | OLS/IV, penalized/robust regression, LDV, discrete choice |
+| [Nonparametric](nonparametric/nonparametric.md) | KDE, kernel/local-polynomial regression, LOWESS |
+| [Forecasting](forecasting/fceval.md) | Forecasting, forecast evaluation/combination, nowcasting |
+| [Testing](testing/teststat.md) | Unit-root, cointegration, break, and diagnostic tests |
+| [Infrastructure](infrastructure/core.md) | Core utilities, data, DGP simulation, GMM, plotting |
 
 # Usage
 

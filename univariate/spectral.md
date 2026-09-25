@@ -68,7 +68,7 @@ show(stdout, sd)
 
 # See also
 
-* [ARIMA Models](/univariate/arima.md) - The correlogram feeds ARMA order selection.
-* [Time Series Filters](/univariate/filters.md) - Filters whose frequency responses `transfer_function` evaluates.
-* [ARCH Models](/univariate/arch.md) - ARCH-LM and squared-residual diagnostics for fitted volatility models.
-* [MacroEconometricModels.jl overview](/overview.md) - Package feature map.
+* [ARIMA Models](arima.md) - The correlogram feeds ARMA order selection.
+* [Time Series Filters](filters.md) - Filters whose frequency responses `transfer_function` evaluates.
+* [ARCH Models](arch.md) - ARCH-LM and squared-residual diagnostics for fitted volatility models.
+* [MacroEconometricModels.jl overview](../overview.md) - Package feature map.

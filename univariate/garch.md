@@ -71,7 +71,7 @@ report(garch)
 
 # See also
 
-* [ARCH Models](/univariate/arch.md) - The single-lag foundation of the GARCH family.
-* [Stochastic Volatility](/univariate/sv.md) - Latent-volatility alternative with leverage and Student-t errors.
-* [Multivariate GARCH](/multivariate/) - CCC, DCC, and BEKK covariance models reusing these margins.
-* [MacroEconometricModels.jl overview](/overview.md) - Package feature map.
+* [ARCH Models](arch.md) - The single-lag foundation of the GARCH family.
+* [Stochastic Volatility](sv.md) - Latent-volatility alternative with leverage and Student-t errors.
+* [Multivariate GARCH](../multivariate/mgarch.md) - CCC, DCC, and BEKK covariance models reusing these margins.
+* [MacroEconometricModels.jl overview](../overview.md) - Package feature map.

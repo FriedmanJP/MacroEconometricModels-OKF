@@ -68,5 +68,5 @@ sol = blanchard_solve(m, ss)
 
 # See also
 
-* [DSGE Models](/dsge/dsge.md) - representative-agent pipeline; Gensys backend for `to_spec` wrappers
-* [Continuous-Time Heterogeneous Agents](/dsge/ct.md) - infinite-horizon incomplete markets in continuous time
+* [DSGE Models](dsge.md) - representative-agent pipeline; Gensys backend for `to_spec` wrappers
+* [Continuous-Time Heterogeneous Agents](ct.md) - infinite-horizon incomplete markets in continuous time

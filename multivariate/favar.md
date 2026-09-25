@@ -69,8 +69,8 @@ fc_panel = favar_panel_forecast(favar, fc)
 
 # See also
 
-* [Factor Models](/multivariate/factor.md) - factor extraction, factor-count selection, and structural DFMs
-* [Vector Autoregression](/multivariate/var.md) - the augmented-system estimator and identification machinery behind `to_var`
-* [Bayesian VAR](/multivariate/bvar.md) - posterior infrastructure the Bayesian FAVAR delegates to
-* [Local Projections](/multivariate/lp.md) - direct impulse-response estimation without a factor structure
-* [Vector Error Correction Models](/multivariate/vecm.md) - cointegrated systems as an alternative to factor dynamics
+* [Factor Models](factor.md) - factor extraction, factor-count selection, and structural DFMs
+* [Vector Autoregression](var.md) - the augmented-system estimator and identification machinery behind `to_var`
+* [Bayesian VAR](bvar.md) - posterior infrastructure the Bayesian FAVAR delegates to
+* [Local Projections](lp.md) - direct impulse-response estimation without a factor structure
+* [Vector Error Correction Models](vecm.md) - cointegrated systems as an alternative to factor dynamics

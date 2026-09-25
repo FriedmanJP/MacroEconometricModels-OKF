@@ -58,7 +58,7 @@ report(fc)
 
 # See also
 
-* [GARCH Models](/univariate/garch.md) - Parsimonious persistence via lagged variances, leverage, and long-memory extensions.
-* [Stochastic Volatility](/univariate/sv.md) - Parameter-driven latent-volatility alternative to ARCH.
-* [Spectral Analysis](/univariate/spectral.md) - Portmanteau serial-correlation tests.
-* [MacroEconometricModels.jl overview](/overview.md) - Package feature map.
+* [GARCH Models](garch.md) - Parsimonious persistence via lagged variances, leverage, and long-memory extensions.
+* [Stochastic Volatility](sv.md) - Parameter-driven latent-volatility alternative to ARCH.
+* [Spectral Analysis](spectral.md) - Portmanteau serial-correlation tests.
+* [MacroEconometricModels.jl overview](../overview.md) - Package feature map.

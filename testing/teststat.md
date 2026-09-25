@@ -161,7 +161,7 @@ level. Confirm with `kpss_test`, whose null is stationarity, before differencing
 
 # See also
 
-- [/multivariate/var.md](/multivariate/var.md) — VAR estimation whose lagged dynamics these tests validate
-- [/multivariate/vecm.md](/multivariate/vecm.md) — VECM estimation consuming Johansen cointegrating vectors
-- [/univariate/arima.md](/univariate/arima.md) — univariate models specified after unit root screening
-- [/panel/index.md](/panel/index.md) — panel estimation validated by the panel tests
+- [../multivariate/var.md](../multivariate/var.md) — VAR estimation whose lagged dynamics these tests validate
+- [../multivariate/vecm.md](../multivariate/vecm.md) — VECM estimation consuming Johansen cointegrating vectors
+- [../univariate/arima.md](../univariate/arima.md) — univariate models specified after unit root screening
+- [../panel/preg.md](../panel/preg.md) — panel estimation validated by the panel tests

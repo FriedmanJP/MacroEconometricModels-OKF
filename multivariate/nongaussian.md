@@ -91,7 +91,7 @@ report(irfs)
 
 # See also
 
-* [Vector Autoregression](/multivariate/var.md) - reduced-form estimation feeding every `identify_*` method
-* [Local Projections](/multivariate/lp.md) - LP-IV external-instrument identification as an economic-restriction alternative
-* [Multivariate GARCH](/multivariate/mgarch.md) - conditional covariance modelling behind GARCH-based identification
-* [Vector Error Correction Models](/multivariate/vecm.md) - SVEC permanent/transitory identification for cointegrated systems
+* [Vector Autoregression](var.md) - reduced-form estimation feeding every `identify_*` method
+* [Local Projections](lp.md) - LP-IV external-instrument identification as an economic-restriction alternative
+* [Multivariate GARCH](mgarch.md) - conditional covariance modelling behind GARCH-based identification
+* [Vector Error Correction Models](vecm.md) - SVEC permanent/transitory identification for cointegrated systems

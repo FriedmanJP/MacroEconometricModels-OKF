@@ -53,6 +53,6 @@ report(m)
 
 # See also
 
-* [Regression (OLS, IV, and Limited Dependent Variables)](/cross-section/reg.md) - single-equation OLS/IV foundation the system estimators build on
-* [Panel Regression](/panel/preg.md) - fixed/random-effects and panel IV estimators for longitudinal data
-* [Vector Autoregression (VAR)](/multivariate/var.md) - multi-equation systems in the time-series domain
+* [Regression (OLS, IV, and Limited Dependent Variables)](reg.md) - single-equation OLS/IV foundation the system estimators build on
+* [Panel Regression](../panel/preg.md) - fixed/random-effects and panel IV estimators for longitudinal data
+* [Vector Autoregression (VAR)](../multivariate/var.md) - multi-equation systems in the time-series domain

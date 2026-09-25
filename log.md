@@ -56,3 +56,14 @@ description: Chronological history of changes to this OKF bundle.
   dead plain-text refs in `nonlinear`/`statespace`). A few
   agent-reported LOW details did not reproduce against upstream and
   were left unchanged.
+- Dogfood fixes: all bundle links converted from bundle-rooted to
+  relative paths so navigation works both in the viewer and on GitHub
+  (the validator now checks relative links too, with a negative
+  control); hub links retargeted to lead concepts; four plain-text
+  See also blocks converted to markdown links; three topical in-links
+  added (`pvar`→`gmm`, `reg`→`nonparametric`, `lp`→`counterfactual`).
+  Viewer upgrades: body/description search, domain filter, per-concept
+  view-source links, `status-approved` badge style, relative-link
+  resolution, responsive layout, CDN-load guard, `log.md` excluded
+  from the graph. Result: 40 concepts, 171 edges, zero orphans,
+  zero dead in-viewer links.

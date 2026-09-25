@@ -93,7 +93,8 @@ report(slp)
 
 # See also
 
-* [Vector Autoregression](/multivariate/var.md) - system-based impulse responses and the `compare_var_lp` baseline
-* [Bayesian VAR](/multivariate/bvar.md) - Bayesian impulse responses with credible bands
-* [Vector Error Correction Models](/multivariate/vecm.md) - impulse responses for cointegrated systems
-* [Factor Models](/multivariate/factor.md) - factor-augmented settings where LP responses apply
+* [Vector Autoregression](var.md) - system-based impulse responses and the `compare_var_lp` baseline
+* [Bayesian VAR](bvar.md) - Bayesian impulse responses with credible bands
+* [Vector Error Correction Models](vecm.md) - impulse responses for cointegrated systems
+* [Factor Models](factor.md) - factor-augmented settings where LP responses apply
+* [Policy Counterfactuals](../policy-counterfactuals/counterfactual.md) - structural-LP menus feeding sufficient-statistics policy analysis

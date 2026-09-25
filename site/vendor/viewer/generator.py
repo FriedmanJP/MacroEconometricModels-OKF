@@ -61,11 +61,15 @@ class Concept:
 
     def to_node(self) -> dict[str, Any]:
         color = _TYPE_PALETTE.get(self.type, _DEFAULT_NODE_COLOR)
+        # FriedmanJP/MacroEconometricModels-OKF: top-level directory drives
+        # the domain filter; root concepts group under "(root)".
+        domain = self.id.split("/")[0] if "/" in self.id else "(root)"
         return {
             "data": {
                 "id": self.id,
                 "label": self.title or self.id,
                 "type": self.type,
+                "domain": domain,
                 "description": self.description,
                 "resource": self.resource,
                 "tags": self.tags,
@@ -198,6 +202,9 @@ def generate_visualization(
     out_path: Path,
     *,
     bundle_name: str | None = None,
+    # FriedmanJP/MacroEconometricModels-OKF: base URL for per-concept
+    # view-source links (concept id + ".md" is appended); None hides them.
+    repo_url: str | None = None,
 ) -> dict[str, int]:
     """Walk a bundle and write a single self-contained HTML visualization.
 
@@ -221,6 +228,7 @@ def generate_visualization(
         .replace("/*__VIZ_JS__*/", js)
         .replace("__BUNDLE_NAME__", json.dumps(name))
         .replace("__BUNDLE_DATA__", json.dumps(graph, default=str))
+        .replace("__BUNDLE_REPO__", json.dumps(repo_url))
     )
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")

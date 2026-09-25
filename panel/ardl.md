@@ -71,8 +71,8 @@ st = symmetry_test(nm)
 
 # See also
 
-* [Panel Regression](/panel/preg.md) - static and dynamic linear panel estimators
-* [Panel VAR](/panel/pvar.md) - multivariate dynamic panels
-* [Difference-in-Differences](/panel/did.md) - treatment-effect designs on panels
-* [Cointegrating Regression](/multivariate/cointreg.md) - FMOLS/CCR/DOLS single-equation cointegration
-* [Vector Error Correction Models](/multivariate/vecm.md) - system cointegration with multiple vectors
+* [Panel Regression](preg.md) - static and dynamic linear panel estimators
+* [Panel VAR](pvar.md) - multivariate dynamic panels
+* [Difference-in-Differences](did.md) - treatment-effect designs on panels
+* [Cointegrating Regression](../multivariate/cointreg.md) - FMOLS/CCR/DOLS single-equation cointegration
+* [Vector Error Correction Models](../multivariate/vecm.md) - system cointegration with multiple vectors

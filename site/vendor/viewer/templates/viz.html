@@ -17,6 +17,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- FriedmanJP/MacroEconometricModels-OKF: viewport for narrow screens. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OKF Bundle Viewer</title>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
@@ -31,9 +33,13 @@
     <span class="muted">OKF bundle</span>
   </div>
   <div class="controls">
-    <input id="search" type="search" placeholder="Search title / id / tag">
+    <input id="search" type="search" placeholder="Search titles, tags, bodies">
     <select id="filter-type">
       <option value="">All types</option>
+    </select>
+    <!-- FriedmanJP/MacroEconometricModels-OKF: domain filter. -->
+    <select id="filter-domain">
+      <option value="">All domains</option>
     </select>
     <select id="layout">
       <option value="cose">cose (force)</option>
@@ -64,6 +70,8 @@
         <dt>Generated</dt><dd id="detail-generated"></dd>
         <dt>Verified</dt><dd id="detail-verified"></dd>
         <dt>Sources</dt><dd id="detail-sources"></dd>
+        <!-- FriedmanJP/MacroEconometricModels-OKF: view-source row. -->
+        <dt id="detail-source-dt" hidden>Source</dt><dd id="detail-source-dd" hidden><a id="detail-source" target="_blank" rel="noopener">View concept file</a></dd>
       </dl>
       <hr>
       <div id="detail-body"></div>
@@ -78,6 +86,7 @@
 <script>
 window.BUNDLE_NAME = __BUNDLE_NAME__;
 window.BUNDLE = __BUNDLE_DATA__;
+window.BUNDLE_REPO = __BUNDLE_REPO__;
 </script>
 <script>
 /*__VIZ_JS__*/

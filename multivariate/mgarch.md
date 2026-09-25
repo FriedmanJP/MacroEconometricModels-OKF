@@ -64,7 +64,7 @@ report(bekk)
 
 # See also
 
-* [Vector Autoregression](/multivariate/var.md) - conditional-mean dynamics for the same return panels
-* [Bayesian VAR](/multivariate/bvar.md) - TVP-VAR with stochastic volatility as a parameter-driven alternative
-* [Statistical Identification](/multivariate/nongaussian.md) - GARCH-based SVAR identification via heteroskedasticity
-* [Factor Models](/multivariate/factor.md) - dimension reduction for large cross-asset panels
+* [Vector Autoregression](var.md) - conditional-mean dynamics for the same return panels
+* [Bayesian VAR](bvar.md) - TVP-VAR with stochastic volatility as a parameter-driven alternative
+* [Statistical Identification](nongaussian.md) - GARCH-based SVAR identification via heteroskedasticity
+* [Factor Models](factor.md) - dimension reduction for large cross-asset panels

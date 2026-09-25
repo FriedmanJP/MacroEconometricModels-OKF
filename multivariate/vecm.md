@@ -76,7 +76,7 @@ report(g)
 
 # See also
 
-* [Vector Autoregression](/multivariate/var.md) - stationary systems and the `to_var` target type
-* [Bayesian VAR](/multivariate/bvar.md) - shrinkage estimation of VAR dynamics
-* [Local Projections](/multivariate/lp.md) - direct impulse-response estimation without cointegration structure
-* [Factor Models](/multivariate/factor.md) - large-panel dimension reduction
+* [Vector Autoregression](var.md) - stationary systems and the `to_var` target type
+* [Bayesian VAR](bvar.md) - shrinkage estimation of VAR dynamics
+* [Local Projections](lp.md) - direct impulse-response estimation without cointegration structure
+* [Factor Models](factor.md) - large-panel dimension reduction

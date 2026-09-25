@@ -69,6 +69,6 @@ report(comb)
 
 # See also
 
-- /forecasting/nowcast.md
-- /multivariate/var.md
-- /univariate/arima.md
+* [Nowcasting Mixed-Frequency Data](nowcast.md) - real-time estimates whose accuracy this module scores
+* [Vector Autoregression (VAR)](../multivariate/var.md) - system forecasts entering forecast comparisons
+* [ARIMA Models](../univariate/arima.md) - univariate forecasts entering forecast comparisons

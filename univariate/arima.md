@@ -62,7 +62,7 @@ report(fc)
 
 # See also
 
-* [Spectral Analysis](/univariate/spectral.md) - ACF/PACF correlograms for order identification and Ljung-Box diagnostics.
-* [Time Series Filters](/univariate/filters.md) - Beveridge-Nelson decomposition selects its ARMA order via `auto_arima`.
-* [X-13ARIMA-SEATS](/univariate/x13.md) - Seasonal adjustment built on seasonal ARIMA models.
-* [MacroEconometricModels.jl overview](/overview.md) - Package feature map.
+* [Spectral Analysis](spectral.md) - ACF/PACF correlograms for order identification and Ljung-Box diagnostics.
+* [Time Series Filters](filters.md) - Beveridge-Nelson decomposition selects its ARMA order via `auto_arima`.
+* [X-13ARIMA-SEATS](x13.md) - Seasonal adjustment built on seasonal ARIMA models.
+* [MacroEconometricModels.jl overview](../overview.md) - Package feature map.

@@ -25,10 +25,13 @@ sys.path.insert(0, str(REPO_ROOT / "site" / "vendor"))
 from viewer.generator import generate_visualization  # noqa: E402
 
 BUNDLE_NAME = "MacroEconometricModels OKF"
+REPO_URL = "https://github.com/FriedmanJP/MacroEconometricModels-OKF/blob/main/"
 
 # Top-level *.md files that are part of the OKF bundle (index.md files are
-# skipped by the generator; README.md is repo scaffolding, not a concept).
-ROOT_MD = ("index.md", "overview.md", "log.md")
+# skipped by the generator; README.md is repo scaffolding, not a concept;
+# log.md stays in the bundle but out of the viewer, where it is an
+# untagged orphan node).
+ROOT_MD = ("index.md", "overview.md")
 
 
 def stage_bundle(dest: Path) -> None:
@@ -58,7 +61,7 @@ def main() -> int:
         stage_bundle(stage)
         out_path = out_dir / "index.html"
         stats = generate_visualization(
-            stage, out_path, bundle_name=BUNDLE_NAME
+            stage, out_path, bundle_name=BUNDLE_NAME, repo_url=REPO_URL
         )
     # The deployed page is served from a subpath; keep a .nojekyll marker
     # so GitHub Pages serves the directory listing-free build as-is.

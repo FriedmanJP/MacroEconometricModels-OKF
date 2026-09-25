@@ -96,9 +96,9 @@ report(model)
 
 # See also
 
-* [Shared Kernel](/infrastructure/core.md) - reproducibility, persistence, and tabular exports for containers
-* [Simulation (DGPs)](/infrastructure/dgp.md) - synthetic samples for Monte Carlo checks
-* [Visualization](/infrastructure/plotting.md) - container views (`:line`, `:corr`, panel views)
-* [Vector Autoregression](/multivariate/var.md) - estimation straight from a container
-* [Difference-in-Differences](/panel/did.md) - consumer of panel cohorts
-* [Input-Output Analysis](/io/io.md) - home of the `:wiot` example dataset
+* [Shared Kernel](core.md) - reproducibility, persistence, and tabular exports for containers
+* [Simulation (DGPs)](dgp.md) - synthetic samples for Monte Carlo checks
+* [Visualization](plotting.md) - container views (`:line`, `:corr`, panel views)
+* [Vector Autoregression](../multivariate/var.md) - estimation straight from a container
+* [Difference-in-Differences](../panel/did.md) - consumer of panel cohorts
+* [Input-Output Analysis](../io/io.md) - home of the `:wiot` example dataset

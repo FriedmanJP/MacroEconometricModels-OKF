@@ -77,7 +77,7 @@ report(fc)
 
 # See also
 
-* [Vector Autoregression](/multivariate/var.md) - frequentist counterpart and summary-model type
-* [Vector Error Correction Models](/multivariate/vecm.md) - cointegrated systems
-* [Local Projections](/multivariate/lp.md) - non-Bayesian direct impulse-response estimation
-* [Factor Models](/multivariate/factor.md) - dimension reduction for large Bayesian systems
+* [Vector Autoregression](var.md) - frequentist counterpart and summary-model type
+* [Vector Error Correction Models](vecm.md) - cointegrated systems
+* [Local Projections](lp.md) - non-Bayesian direct impulse-response estimation
+* [Factor Models](factor.md) - dimension reduction for large Bayesian systems

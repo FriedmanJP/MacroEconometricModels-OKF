@@ -80,8 +80,8 @@ report(m)
 
 # See also
 
-* [Simulation (DGPs)](/infrastructure/dgp.md) - `dgp_gmm` designs with heteroskedastic and invalid-instrument arms
-* [Shared Kernel](/infrastructure/core.md) - HAC covariance behind the optimal weighting matrix
-* [Local Projections](/multivariate/lp.md) - LP estimators including the GMM route
-* [Panel VAR](/panel/pvar.md) - panel consumer of the linear GMM utilities
-* [DSGE Models](/dsge/dsge.md) - DSGE estimation with `method=:smm`
+* [Simulation (DGPs)](dgp.md) - `dgp_gmm` designs with heteroskedastic and invalid-instrument arms
+* [Shared Kernel](core.md) - HAC covariance behind the optimal weighting matrix
+* [Local Projections](../multivariate/lp.md) - LP estimators including the GMM route
+* [Panel VAR](../panel/pvar.md) - panel consumer of the linear GMM utilities
+* [DSGE Models](../dsge/dsge.md) - DSGE estimation with `method=:smm`

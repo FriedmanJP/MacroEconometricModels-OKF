@@ -54,5 +54,5 @@ report(kr)
 
 # See also
 
-* [Regression (OLS, IV, and Limited Dependent Variables)](/cross-section/reg.md) - parametric conditional means
-* [Nonlinear Time Series](/nonlinear-statespace/nonlinear.md) - parametric transition-function time-series models
+* [Regression (OLS, IV, and Limited Dependent Variables)](../cross-section/reg.md) - parametric conditional means
+* [Nonlinear Time Series](../nonlinear-statespace/nonlinear.md) - parametric transition-function time-series models

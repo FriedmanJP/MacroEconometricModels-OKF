@@ -82,7 +82,7 @@ f = forecast(m, 8; reps=1000)
 
 # See also
 
-- /nonlinear-statespace/statespace.md
-- /univariate/arima.md
-- /multivariate/var.md
-- /testing/teststat.md
+* [State-Space Models](statespace.md) - linear-Gaussian filtering underlying the Kim smoother
+* [ARIMA Models](../univariate/arima.md) - linear baseline the Hansen test rejects toward thresholds
+* [Vector Autoregression (VAR)](../multivariate/var.md) - linear multivariate baseline
+* [Hypothesis Tests](../testing/teststat.md) - linearity and stability pretests

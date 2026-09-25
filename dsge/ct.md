@@ -65,5 +65,5 @@ report(ss)
 
 # See also
 
-* [DSGE Models](/dsge/dsge.md) - representative-agent pipeline and discrete-time heterogeneous agents
-* [Overlapping Generations](/dsge/olg.md) - finite-horizon demographics and life-cycle saving
+* [DSGE Models](dsge.md) - representative-agent pipeline and discrete-time heterogeneous agents
+* [Overlapping Generations](olg.md) - finite-horizon demographics and life-cycle saving

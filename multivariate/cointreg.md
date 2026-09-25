@@ -56,6 +56,6 @@ round.(confint(m; level=0.95), digits=4)
 
 # See also
 
-* [Vector Error Correction Models](/multivariate/vecm.md) - full-system cointegration with multiple cointegrating vectors
-* [Vector Autoregression](/multivariate/var.md) - stationary systems and the `to_var` conversion target
-* [Local Projections](/multivariate/lp.md) - impulse responses without cointegration structure
+* [Vector Error Correction Models](vecm.md) - full-system cointegration with multiple cointegrating vectors
+* [Vector Autoregression](var.md) - stationary systems and the `to_var` conversion target
+* [Local Projections](lp.md) - impulse responses without cointegration structure

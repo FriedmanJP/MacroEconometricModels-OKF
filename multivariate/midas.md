@@ -58,6 +58,6 @@ report(fc)
 
 # See also
 
-* [Factor Models](/multivariate/factor.md) - mixed-frequency DFM as a multi-indicator alternative
-* [Bayesian VAR](/multivariate/bvar.md) - mixed-frequency MFVAR for joint multi-series nowcasting
-* [Vector Autoregression](/multivariate/var.md) - single-frequency forecasting baseline
+* [Factor Models](factor.md) - mixed-frequency DFM as a multi-indicator alternative
+* [Bayesian VAR](bvar.md) - mixed-frequency MFVAR for joint multi-series nowcasting
+* [Vector Autoregression](var.md) - single-frequency forecasting baseline
