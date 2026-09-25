@@ -135,7 +135,8 @@
         style: { "opacity": 0.15 },
       },
     ],
-    layout: { name: "cose", animate: false, padding: 30 },
+    // FriedmanJP/MacroEconometricModels-OKF: concentric is the default layout.
+    layout: { name: "concentric", animate: false, padding: 30 },
     wheelSensitivity: 0.2,
   });
 

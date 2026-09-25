@@ -51,3 +51,8 @@ comment at the edit site):
 
 14. `.status-approved` badge style (this bundle's review status).
 15. Responsive stacking of the graph/detail panes below 900px.
+
+Template + `viz.js`:
+
+16. Concentric is the default graph layout (template option order and
+    initial Cytoscape layout); cose remains available.
