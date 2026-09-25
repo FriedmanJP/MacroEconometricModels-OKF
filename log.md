@@ -32,5 +32,5 @@ description: Chronological history of changes to this OKF bundle.
   concepts and the package overview; `status` flipped from `draft` to
   `approved` with `reviewed_by`/`reviewed_at` recorded.
 - License decision (Q2): bundle licensed under Apache License 2.0
-  (`LICENSE`, copyright 2026 FriedmanJP), matching the upstream
+  (`LICENSE`, copyright 2026 Wookyung Chung), matching the upstream
   open-knowledge-format project.
