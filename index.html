@@ -235,8 +235,8 @@ hr { border: none; border-top: 1px solid #e2e8f0; margin: 14px 0; }
       <option value="">All domains</option>
     </select>
     <select id="layout">
+      <option value="concentric" selected>concentric</option>
       <option value="cose">cose (force)</option>
-      <option value="concentric">concentric</option>
       <option value="breadthfirst">breadth-first</option>
       <option value="circle">circle</option>
       <option value="grid">grid</option>
@@ -419,7 +419,8 @@ window.BUNDLE_REPO = "https://github.com/FriedmanJP/MacroEconometricModels-OKF/b
         style: { "opacity": 0.15 },
       },
     ],
-    layout: { name: "cose", animate: false, padding: 30 },
+    // FriedmanJP/MacroEconometricModels-OKF: concentric is the default layout.
+    layout: { name: "concentric", animate: false, padding: 30 },
     wheelSensitivity: 0.2,
   });
 
