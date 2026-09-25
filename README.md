@@ -7,9 +7,7 @@ knowledge bundle describing every feature and function of
 ## Status
 
 Complete. 39 `type: Feature` concepts across 12 domain directories,
-all human-reviewed and approved (`reviewed_by: chung9207`). The
-authoring plan lives at
-[.agents/plans/2026-09-25-memecon-okf-bundle.md](.agents/plans/2026-09-25-memecon-okf-bundle.md).
+all human-reviewed and approved (`reviewed_by: chung9207`).
 
 ## Layout
 
