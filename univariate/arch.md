@@ -4,7 +4,9 @@ title: ARCH Models
 description: Engle ARCH(q) models for time-varying conditional variance with MLE estimation and variance forecasting.
 resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/arch
 tags: [arch, volatility, univariate, conditional-variance]
-status: draft
+status: approved
+reviewed_by: chung9207
+reviewed_at: 2026-09-25
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/univariate

@@ -4,7 +4,9 @@ title: GARCH Models
 description: GARCH, EGARCH, GJR-GARCH, GARCH-MIDAS, FIGARCH, IGARCH, component GARCH, and APARCH volatility models.
 resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/garch
 tags: [garch, egarch, leverage, volatility, univariate, long-memory, midas]
-status: draft
+status: approved
+reviewed_by: chung9207
+reviewed_at: 2026-09-25
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/univariate

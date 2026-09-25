@@ -10,7 +10,9 @@ tags:
   - opp
   - irf-matching
   - dsge
-status: draft
+status: approved
+reviewed_by: chung9207
+reviewed_at: 2026-09-25
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/small-domains

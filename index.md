@@ -27,3 +27,8 @@ Start at the package overview, then drill into a domain.
 * [Forecasting](/forecasting/) - Multi-model forecasting, forecast evaluation and combination, and nowcasting.
 * [Testing](/testing/) - Unit-root, cointegration, break, and general specification and hypothesis tests.
 * [Infrastructure](/infrastructure/) - Core utilities, data handling, DGP simulation, GMM, and plotting.
+
+## License
+
+This bundle is licensed under the [Apache License, Version 2.0](LICENSE),
+matching the upstream [open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format) project.

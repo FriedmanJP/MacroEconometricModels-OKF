@@ -4,7 +4,9 @@ title: Stochastic Volatility
 description: Bayesian stochastic volatility models with latent AR(1) log-variance estimated by Gibbs sampling.
 resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/sv
 tags: [stochastic-volatility, bayesian, gibbs, volatility, univariate]
-status: draft
+status: approved
+reviewed_by: chung9207
+reviewed_at: 2026-09-25
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/univariate

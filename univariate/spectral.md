@@ -4,7 +4,9 @@ title: Spectral Analysis
 description: ACF/PACF, spectral density, cross-spectrum, frequency-domain filtering, and white-noise diagnostics.
 resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/spectral
 tags: [spectral, acf, periodogram, coherence, filtering, diagnostics, univariate]
-status: draft
+status: approved
+reviewed_by: chung9207
+reviewed_at: 2026-09-25
 stale_after: 2026-12-24T00:00:00Z
 generated:
   by: memecon-okf/univariate
