@@ -6,13 +6,14 @@ knowledge bundle describing every feature and function of
 
 ## Status
 
-Scaffolding. The authoring plan lives at
-[.agents/plans/2026-09-25-memecon-okf-bundle.md](.agents/plans/2026-09-25-memecon-okf-bundle.md);
-no OKF concepts have been written yet.
+Complete. 39 `type: Feature` concepts across 12 domain directories,
+all human-reviewed and approved (`reviewed_by: chung9207`). The
+authoring plan lives at
+[.agents/plans/2026-09-25-memecon-okf-bundle.md](.agents/plans/2026-09-25-memecon-okf-bundle.md).
 
-## Layout (planned)
+## Layout
 
-This repository will itself be the OKF bundle (bundle at repo root):
+This repository is itself the OKF bundle (bundle at repo root):
 
 ```text
 index.md                  # bundle root index (carries okf_version)
@@ -30,18 +31,19 @@ nonparametric/            # nonparametric
 forecasting/              # fceval, nowcast
 testing/                  # teststat
 infrastructure/           # core, data, dgp, gmm, plotting
-guides/                   # workflow-oriented how-tos
-references/               # mirrored run instructions / code (OKF convention)
+scripts/validate_okf.py   # bundle conformance checker (also runs in CI)
 ```
 
-Each domain directory gets an `index.md`; each feature area gets one
+Each domain directory has an `index.md`; each feature area has one
 `type: Feature` concept with a function table in the body.
 
 ## Sources of truth
 
 - OKF v0.2 specification: <https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md>
-- Upstream package: <https://github.com/FriedmanJP/MacroEconometricModels.jl> (docs + docstrings)
+- Upstream package: <https://github.com/FriedmanJP/MacroEconometricModels.jl> (docs + docstrings),
+  pinned at commit `3d12bb6c`
 
 ## License
 
-GNU General Public License v3.0 — see [LICENSE](LICENSE) (mirrors upstream).
+Apache License, Version 2.0 — see [LICENSE](LICENSE).
+Copyright 2026 Wookyung Chung.
