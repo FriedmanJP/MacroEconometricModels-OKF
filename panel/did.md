@@ -31,7 +31,7 @@ sources:
 # Summary
 
 The `did` module covers static and event-time treatment effects under staggered adoption, plus the local-projection formulation of the same designs.
-`estimate_did` dispatches on `method`: traditional TWFE event-study regression plus four heterogeneity-robust estimators — Callaway-Sant'Anna group-time ATTs (with `:never_treated`/`:not_yet_treated` controls and `:varying`/`:universal` base periods), the Sun-Abraham interaction-weighted estimator, the Borusyak-Jaravel-Spiess imputation estimator, and the de Chaisemartin-D'Haultfoeuille first-difference estimator with block-bootstrap SEs.
+`estimate_did` dispatches on `method` (`:twfe`, `:callaway_santanna`, `:sun_abraham`, `:bjs`, `:did_multiplegt`): traditional TWFE event-study regression plus four heterogeneity-robust estimators — Callaway-Sant'Anna group-time ATTs (with `:never_treated`/`:not_yet_treated` controls and `:varying`/`:universal` base periods), the Sun-Abraham interaction-weighted estimator, the Borusyak-Jaravel-Spiess imputation estimator, and the de Chaisemartin-D'Haultfoeuille first-difference estimator with block-bootstrap SEs.
 Diagnostics include the Goodman-Bacon 2x2 decomposition, a joint pre-trend Wald test, the dCDH negative-weight check, and Rambachan-Roth HonestDiD sensitivity analysis under relative-magnitude or smoothness restrictions.
 `estimate_event_study_lp` and `estimate_lp_did` run horizon-by-horizon local projections on long-differenced outcomes with a switching-indicator treatment; LP-DiD adds clean-control-sample rules (absorbing/non-absorbing/one-off), pre-mean differencing, IPW reweighting, and pooled estimates, matching Stata `lpdid`.
 
@@ -39,7 +39,7 @@ Diagnostics include the Goodman-Bacon 2x2 decomposition, a joint pre-trend Wald 
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/estimation.jl) | `estimate_did(pd::PanelData, outcome, treatment; method=:twfe, leads=0, horizon=5, control_group=:never_treated, cluster=:unit, base_period=:varying, n_boot=200, ...)` | TWFE / Callaway-Sant'Anna / Sun-Abraham / BJS / dCDH event-study ATTs |
+| [estimate_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/estimation.jl) | `estimate_did(pd::PanelData, outcome, treatment; method=:twfe, leads=0, horizon=5, control_group=:never_treated, cluster=:unit, base_period=:varying, n_boot=200, ...)` | Event-study ATTs via `:twfe` / `:callaway_santanna` / `:sun_abraham` / `:bjs` / `:did_multiplegt` |
 | [estimate_event_study_lp](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/event_study.jl) | `estimate_event_study_lp(pd::PanelData, outcome, treatment, H::Int; leads=3, lags=4, covariates=String[], cluster=:unit, conf_level=0.95)` | Horizon-by-horizon LP event study with switching indicator |
 | [estimate_lp_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/lpdid.jl) | `estimate_lp_did(pd::PanelData, outcome, treatment, H::Int; pre_window=3, ylags=0, dylags=0, nonabsorbing=nothing, oneoff=false, pmd=nothing, reweight=false, ...)` | LP-DiD with clean control samples, PMD, IPW, pooled estimates |
 | [bacon_decomposition](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/diagnostics.jl) | `bacon_decomposition(pd::PanelData, outcome, treatment)` | Goodman-Bacon 2x2 decomposition of static TWFE |

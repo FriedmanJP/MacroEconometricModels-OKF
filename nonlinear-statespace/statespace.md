@@ -66,5 +66,5 @@ fc = forecast(m, 5)
 
 - /nonlinear-statespace/nonlinear.md
 - /univariate/arima.md
-- /forecasting/forecasting.md
+- /forecasting/nowcast.md
 - /multivariate/var.md

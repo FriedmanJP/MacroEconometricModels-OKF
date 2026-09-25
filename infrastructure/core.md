@@ -62,7 +62,7 @@ The `core` module is the package's shared kernel: the innovation-accounting laye
 | [newey_west](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `newey_west(X, residuals; bandwidth=0, kernel=:bartlett, prewhiten=false, ...)` | Newey-West HAC covariance matrix |
 | [white_vcov](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `white_vcov(X, residuals; variant=:hc0, ...)` | White heteroskedasticity-robust covariance (HC0-HC3) |
 | [driscoll_kraay](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `driscoll_kraay(X, u; bandwidth=0, kernel=:bartlett, ...)` | Driscoll-Kraay covariance |
-| [robust_vcov](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `robust_vcov(X, residuals, estimator::AbstractCovarianceEstimator)` | Dispatch to a covariance-estimator object |
+| [robust_vcov](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `robust_vcov(X, residuals, estimator::Union{NeweyWestEstimator,WhiteEstimator,DriscollKraayEstimator})` | Dispatch on the concrete estimator object (vector or matrix residuals) |
 | [optimal_bandwidth_nw](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `optimal_bandwidth_nw(residuals; kernel=:bartlett)` | Andrews (1991) plug-in HAC bandwidth |
 | [long_run_covariance](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `long_run_covariance(X; bandwidth=0, kernel=:bartlett)` | Kernel long-run covariance matrix |
 | [register_cov_estimator!](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/covariance.jl) | `register_cov_estimator!(name::Symbol, ::Type{E})` | Register a custom covariance estimator type |
@@ -81,6 +81,7 @@ The `core` module is the package's shared kernel: the innovation-accounting laye
 | [set_log_level](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/logging.jl) | `set_log_level(level)` | Set the global minimum log level |
 | [with_min_level](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/logging.jl) | `with_min_level(f, level)` | Run `f()` at a scoped minimum log level |
 | [set_display_backend](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/display.jl) | `set_display_backend(backend::Symbol)` | Set the PrettyTables backend (`:text`, `:latex`, `:html`) |
+| [with_display_backend](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/display.jl) | `with_display_backend(f, backend::Symbol)` | Run `f()` under a scoped display backend |
 | [long_table](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/tables.jl) | `long_table(result)` | Tidy long table of an array-valued result |
 | [write_csv](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/tables.jl) | `write_csv(result, path)` | Export a result or table to CSV |
 | [KalmanFilterStore](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/kalman_kernel.jl) | `KalmanFilterStore{T}(n_state, T_obs; innovations=false)` | Storage sink for the consolidated Kalman filter |

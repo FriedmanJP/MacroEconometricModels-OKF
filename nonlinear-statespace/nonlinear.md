@@ -36,7 +36,7 @@ sources:
 
 # Summary
 
-The `nonlinear` module fits regime-switching dynamics in the conditional mean: two-regime threshold least squares and self-exciting threshold autoregression (SETAR) with Hansen (1996) linearity tests and Hansen (2000) threshold confidence intervals, smooth-transition autoregression (STAR) with LSTR1/LSTR2/ESTR transitions and Teräsvirta transition selection, and Markov-switching regression plus Hamilton (1989) mean-switching MS-AR estimated via the Hamilton filter, Kim smoother, and EM with ML polish. All fits integrate with `report`, `refs`, `forecast`, and `plot_result`.
+The `nonlinear` module fits regime-switching dynamics in the conditional mean: two-regime threshold least squares and self-exciting threshold autoregression (SETAR) with Hansen (1996) linearity tests and Hansen (2000) threshold confidence intervals, smooth-transition autoregression (STAR) with LSTR1/LSTR2/ESTR transitions and Teräsvirta transition selection, and Markov-switching regression (EM/Baum-Welch with Hamilton filter, Kim smoother, and ML polish) plus Hamilton (1989) mean-switching MS-AR estimated by direct LBFGS on the Hamilton-filter likelihood. All fits integrate with `report`, `refs`, `forecast`, and `plot_result`.
 
 # Functions
 
@@ -50,10 +50,14 @@ The `nonlinear` module fits regime-switching dynamics in the conditional mean: t
 | [star_linearity_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/star.jl) | `star_linearity_test(y, p; s=nothing, d=1)` | Luukkonen–Saikkonen–Teräsvirta LM3 linearity test (chi-square and F forms) |
 | [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/star.jl) | `forecast(m::STARModel, h; reps=1000, level=0.90, seed, rng)` | Bootstrap-simulation forecast of a self-exciting STAR model |
 | [estimate_ms](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/markov_switching.jl) | `estimate_ms(y, X; k_regimes=2, switching_variance=true, max_iter=500, tol=1e-8, xnames)` | Markov-switching regression via EM plus ML polish; intercept-only call available |
-| [estimate_ms_ar](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/markov_switching.jl) | `estimate_ms_ar(y, p; k_regimes=2, switching_variance=false, max_iter=1000, yname="y")` | Hamilton (1989) mean-switching MS-AR(p) on the K^(p+1) expanded state space |
+| [estimate_ms_ar](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/markov_switching.jl) | `estimate_ms_ar(y, p; k_regimes=2, switching_variance=false, max_iter=1000, yname="y")` | Hamilton (1989) mean-switching MS-AR(p) via direct LBFGS on the K^(p+1) expanded state space |
 | [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/markov_switching.jl) | `forecast(m::MSRegModel, h; reps=1000, level=0.90, seed, rng)` | Exact analytic mean forecast for `:ms_ar` with simulated bands |
 | [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/markov_switching.jl) | `forecast(m::MSRegModel, X_new; reps=1000, level=0.90, seed, rng)` | Forecast for `:regression` models given future regressors `X_new` |
 | [predict](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `predict(m::MSRegModel; probs=:smoothed)` | Regime-weighted conditional mean under smoothed or `:filtered` probabilities |
+| [fitted](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `fitted(m::MSRegModel)` | In-sample fit under smoothed probabilities (`y - fitted == residuals`) |
+| [ThresholdForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `ThresholdForecast` (struct) | SETAR simulation forecast with percentile bands |
+| [STARForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `STARForecast` (struct) | STAR simulation forecast with percentile bands |
+| [MSForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `MSForecast` (struct) | MS forecast: analytic mean, simulated bands, regime probabilities |
 | [ThresholdModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `ThresholdModel` (struct) | Fit object: threshold, regime coefficients, CI, attached linearity test |
 | [STARModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `STARModel` (struct) | Fit object: regime coefficients, transition slope/location, LM3 stats |
 | [MSRegModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonlinear/types.jl) | `MSRegModel` (struct) | Fit object: regime means, transition matrix, filtered/smoothed probabilities |
@@ -81,4 +85,4 @@ f = forecast(m, 8; reps=1000)
 - /nonlinear-statespace/statespace.md
 - /univariate/arima.md
 - /multivariate/var.md
-- /testing/tests.md
+- /testing/teststat.md

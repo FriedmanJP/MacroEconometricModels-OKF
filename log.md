@@ -44,3 +44,15 @@ description: Chronological history of changes to this OKF bundle.
   self-contained `index.html`; `.github/workflows/site.yml` deploys it
   to `gh-pages`, served at
   `https://api.friedman.jp/MacroEconometricModels-OKF/`.
+- Verification pass: all 39 concepts re-checked against upstream
+  `3d12bb6c` (multi-agent sweep plus inline re-verification of
+  truncated scopes). No invented names found. Fixed 14 MEDs (wrong
+  estimator claims in `nonlinear`, `occbin_irf` signature, `did`
+  method symbols, `nowcast` horizons, `system`/`reg` over-broad
+  uniformity claims, `dgp` hetero kinds, `:wiot` identity, `vecm`
+  `predict` levels, `factor` StatsAPI gaps, `dsge` file count and
+  `rank_rtol` forwarding, `ct` default, `lp` variant count) and ~25
+  LOWs (omitted rows/fields, stale counts, weak see-also links, two
+  dead plain-text refs in `nonlinear`/`statespace`). A few
+  agent-reported LOW details did not reproduce against upstream and
+  were left unchanged.

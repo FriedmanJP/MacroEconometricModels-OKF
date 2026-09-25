@@ -56,7 +56,7 @@ Restriction tests on `alpha`/`beta` (including weak exogeneity), SVEC permanent/
 | [identify_svec](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/svec.jl) | `identify_svec(vecm::VECMModel; long_run_zeros=nothing, short_run_zeros=nothing, pattern=nothing, n_starts=5, max_iter=400, rng)` | King-Plosser-Stock-Watson permanent/transitory SVEC identification |
 | [permanent_transitory](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/svec.jl) | `permanent_transitory(vecm::VECMModel; method=:gonzalo_ng)` | Gonzalo-Ng or KPSW permanent/transitory decomposition |
 | [dof](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/estimation.jl) | `StatsAPI.dof(m::VECMModel)` | Model degrees of freedom |
-| [predict](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/estimation.jl) | `StatsAPI.predict(m::VECMModel)` | Fitted values in levels |
+| [predict](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/estimation.jl) | `StatsAPI.predict(m::VECMModel)` | In-sample fitted values in differences (not levels) |
 | [VECMModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/types.jl) | `struct VECMModel{T}` | Fitted VECM: `alpha`, `beta`, `Pi`, `Gamma`, `Sigma`, criteria |
 | [VECMForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/types.jl) | `struct VECMForecast{T}` | Level/difference forecasts with CI bounds |
 | [VECMGrangerResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/vecm/types.jl) | `struct VECMGrangerResult{T}` | Short-run, long-run, and strong Wald statistics |

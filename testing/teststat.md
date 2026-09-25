@@ -45,12 +45,15 @@ sources:
 
 # Summary
 
-The `teststat` module (53 source files, the second-largest in the package) is the
+The `teststat` module (53 source files, the most in the package; second by lines
+of code after `dsge`) is the
 shared battery of hypothesis tests used before estimation (integration order,
 cointegrating rank, structural stability, panel stationarity) and after
 estimation (Granger causality, residual normality, ARCH effects, independence,
 distributional fit, nested model comparison). Every result type implements the
-StatsAPI.jl interface (`statistic` via field access, `pvalue`, `nobs`, `dof`),
+StatsAPI.jl interface (`pvalue`, `nobs`, `dof`, plus `statistic` field access
+on most types — exceptions use named fields: `P_T` on `ERSResult`,
+`MZa`/`MZt`/`MSB`/`MPT` on `NgPerronResult`),
 descends from `StatsAPI.HypothesisTest`, and renders with `report(result)`; most
 unit root, cointegration, break, and panel results share the
 `AbstractUnitRootTest` branch. Two results are not hypothesis tests:

@@ -27,7 +27,7 @@ sources:
 
 # Summary
 
-The `data` module provides the typed containers every estimator accepts: `TimeSeriesData`, `PanelData`, and `CrossSectionData`, each carrying variable names, descriptions, and bibliographic references alongside the numbers. Thirteen built-in datasets (FRED-MD/QD, PWT, DDCG, mpdta, Grunfeld, Mroz, stackloss, Nile, Hamilton GNP, Denmark, WIOD, monetary-policy shocks) load via `load_example`; FRED transformation codes 1-7 map levels to stationary series with `inverse_tcode` reconstructing levels; `diagnose`/`fix`/`dropna`/`keeprows` validate and clean; Stata-style `xtset` plus within-group lag/lead/difference and DFM gap-filling cover panels; and container methods on 40+ estimators mean no manual `to_matrix` calls.
+The `data` module provides the typed containers every estimator accepts: `TimeSeriesData`, `PanelData`, and `CrossSectionData`, each carrying variable names, descriptions, and bibliographic references alongside the numbers. Thirteen built-in datasets (FRED-MD/QD, PWT, DDCG, mpdta, Grunfeld, Mroz, stackloss, Nile, Hamilton GNP, Denmark, the `:wiot` two-sector Miller & Blair toy table, monetary-policy shocks) load via `load_example`; FRED transformation codes 1-7 map levels to stationary series with `inverse_tcode` reconstructing levels; `diagnose`/`fix`/`dropna`/`keeprows` validate and clean; Stata-style `xtset` plus within-group lag/lead/difference and DFM gap-filling cover panels; and container methods on 40+ estimators mean no manual `to_matrix` calls.
 
 # Functions
 

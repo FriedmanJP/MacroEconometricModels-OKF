@@ -45,7 +45,7 @@ sources:
 
 The `io` module implements demand-driven (Leontief 1936) and supply-driven (Ghosh 1958) input-output analysis over a single `IOData` container holding intermediate flows `Z`, final demand `Y`, value added `va`, gross output `x`, labels, and satellite accounts, with row and column accounting balances validated at construction.
 Classical tools (multipliers, Rasmussen linkages, SDA, RAS/GRAS, hypothetical extraction, price dual, impact scenarios, network statistics) are linear in the Leontief inverse; environmental extensions push satellite accounts through that same inverse for consumption-based footprints; the MRIO layer adds KWW (2014) export decompositions; and the Baqaee-Farhi layer reinterprets the table as a nested-CES production network for exact nonlinear counterfactuals.
-Downloaders fetch the five public MRIO databases (OECD ICIO, WIOD, EXIOBASE 3, EORA26, GLORIA) with SHA-256 verification, and `parse_icio` / `parse_wiod` turn them into `IOData`.
+Downloaders fetch the public MRIO databases (OECD ICIO, WIOD, EXIOBASE 3, GLORIA) with SHA-256 verification against the `IO_CHECKSUMS` registry — which ships unpopulated, so downloads warn as unverified until the user registers digests — while EORA26 has no automated fetch (manual download; the function throws), and `parse_icio` / `parse_wiod` turn archives into `IOData`.
 
 # Functions
 
@@ -100,6 +100,9 @@ Downloaders fetch the five public MRIO databases (OECD ICIO, WIOD, EXIOBASE 3, E
 | [parse_icio](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/io/parse.jl) | `parse_icio(path::AbstractString; year=nothing, member="", ...)` | Labeled MRIO recipe for OECD ICIO archives |
 | [parse_wiod](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/io/parse.jl) | `parse_wiod(path::AbstractString; year=nothing, sheet=1, ...)` | Labeled MRIO recipe for WIOD 2013 workbooks |
 | [io_file_digest](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/io/download/registry.jl) | `io_file_digest(path::AbstractString)` | SHA-256 hex digest of a downloaded archive for the integrity registry |
+| [nsectors](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/io/types.jl) | `nsectors(io::IOData)` / `nregions(io::IOData)` | Sectors-per-region and region count of a table |
+| [LeontiefModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/io/coefficients.jl) | `struct LeontiefModel{T}` / `struct GhoshModel{T}` | Bundled inverses returned by `leontief` / `ghosh` |
+| [plot_result](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/plotting/io.jl) | `plot_result(r::Union{ExtractionResult,PriceModelResult,ImpactResult,...}; title, save_path)` | Plots for extraction, price, impact, network, multiplier, linkage, and equilibrium results |
 
 Result types (`IOMultipliers`, `LinkageResult`, `SDAResult`, `RASResult`, `ExtractionResult`, `PriceModelResult`, `ImpactResult`, `NetworkStatsResult`, `FootprintResult`, `RegionalFootprintResult`, `VerticalSpecialization`, `ExportDecomposition`, `BaqaeeFarhiResult`, `BFLocal`, `BFElasticities`, `BFShockCurve`, `BFWedgeDecomp`, `BFMisallocation`, `BFEquilibrium`, `IOExtension`, `IOMetaData`) are omitted from the table; see `src/io` for their fields.
 
@@ -115,7 +118,4 @@ footprint(io, "CO2")
 
 # See also
 
-* [Policy Counterfactuals](/policy-counterfactuals/counterfactual.md) - alternative-policy projections built from estimated causal effects
-* [Vector Autoregression (VAR)](/multivariate/var.md) - reduced-form dynamics underlying empirical policy menus
-* [Forecasting](/forecasting/index.md) - forecast evaluation and conditioning workflows
-* [Nonparametric Regression and Density](/nonparametric/nonparametric.md) - flexible estimation without parametric form
+* [Data Management](/infrastructure/data.md) - home of the `:wiot` example table and container conventions

@@ -30,7 +30,7 @@ sources:
 # Summary
 
 The `lp` module estimates impulse responses by Jordà (2005) Local Projections: a separate predictive regression at each horizon with Newey-West HAC standard errors (automatic bandwidth covering the MA(h-1) overlap).
-Five variants extend the core estimator: LP-IV with external instruments (Stock & Watson 2018) including weak-instrument-robust inference, Smooth LP with penalized B-splines (Barnichon & Brownlees 2019), regime-varying State LP (Auerbach & Gorodnichenko 2012), and propensity-score LP for discrete treatments (Angrist, Jordà & Kuersteiner 2018).
+Four variants extend the core estimator: LP-IV with external instruments (Stock & Watson 2018) including weak-instrument-robust inference, Smooth LP with penalized B-splines (Barnichon & Brownlees 2019), regime-varying State LP (Auerbach & Gorodnichenko 2012), and propensity-score LP for discrete treatments (Angrist, Jordà & Kuersteiner 2018).
 `structural_lp` pairs VAR-based identification with LP response estimation, `lp_fevd` gives the R²-based variance decomposition (Gorodnichenko & Lee 2019), and `forecast` produces direct multi-step forecasts.
 
 # Functions
@@ -68,6 +68,10 @@ Five variants extend the core estimator: LP-IV with external instruments (Stock 
 | [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/forecast.jl) | `forecast(lp::LPModel, shock_path::AbstractVector; ci_method=:analytical, conf_level=0.95, n_boot=500, rng)` | Direct multi-step forecast along a shock path |
 | [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/forecast.jl) | `forecast(slp::StructuralLP, shock_idx::Int, shock_path::AbstractVector; ci_method=:analytical, conf_level=0.95, n_boot=500, rng)` | Structural-shock conditional forecast |
 | [lp_fevd](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/fevd.jl) | `lp_fevd(slp::StructuralLP, horizon::Int; method=:r2, bias_correct=true, n_boot=500, conf_level=0.95, var_lags=nothing, seed=nothing, rng)` | R²-based LP forecast error variance decomposition |
+| [fevd](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/fevd.jl) | `fevd(slp::StructuralLP, horizon::Int; kwargs...)` | Alias of `lp_fevd` |
+| [historical_decomposition](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/core/hd.jl) | `historical_decomposition(slp::StructuralLP, T_hd::Int; shock_names=nothing)` | Historical decomposition from structural-LP IRFs |
+| [LPForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/types.jl) | `struct LPForecast{T} <: AbstractForecastResult{T}` | Direct-forecast values, SEs, confidence bands |
+| [LPFEVD](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/types.jl) | `struct LPFEVD{T} <: AbstractFEVD` | FEVD proportions, bias-corrected shares, bands |
 | [LPModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/types.jl) | `struct LPModel{T} <: AbstractLPModel` | Per-horizon coefficients, residuals, vcov, effective samples |
 | [LPImpulseResponse](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/types.jl) | `struct LPImpulseResponse{T} <: AbstractLPImpulseResponse` | LP IRF values, standard errors, confidence bands |
 | [StructuralLP](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/lp/types.jl) | `struct StructuralLP{T} <: AbstractFrequentistResult` | Identified LP system over all structural shocks |

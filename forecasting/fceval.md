@@ -52,6 +52,7 @@ The `fceval` module scores point forecasts without touching any forecast type: e
 | [MincerZarnowitzResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/fceval/types.jl) | `struct MincerZarnowitzResult{T<:AbstractFloat} <: StatsAPI.HypothesisTest` | Efficiency result: `a`, `b`, `se`, `wald`, `pvalue_wald`, `fstat`, `pvalue_f`, `lags`, `kernel`, `T_obs` |
 | [ForecastEncompassingResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/fceval/types.jl) | `struct ForecastEncompassingResult{T<:AbstractFloat} <: StatsAPI.HypothesisTest` | Encompassing result: `b1`, `b2`, `se_b2`, `tstat`, `pvalue`, `lags`, `kernel`, `T_obs` |
 | [ForecastCombination](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/fceval/types.jl) | `struct ForecastCombination{T<:AbstractFloat}` | Combination result: `weights`, `combined`, `method`, `mse`, `models` |
+| [plot_result](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/plotting/fceval.jl) | `plot_result(ev::ForecastEvaluation; view=:metrics, ...)` plus DM/Clark-West/MZ test methods | Metric/Theil views and test plots; generic `save_model`/`load_model` persist results |
 
 # Examples
 

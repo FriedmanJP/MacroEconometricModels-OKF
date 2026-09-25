@@ -38,7 +38,7 @@ Results return `KernelDensity`, `KernelRegression`, and `LowessFit` objects inte
 | [kernel_density](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/density.jl) | `kernel_density(y; kernel=:gaussian, bw=:silverman, npoints=512, cut=3.0)` | Kernel density estimate with rule-of-thumb, plug-in, or user bandwidth |
 | [kernel_reg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/kernel_reg.jl) | `kernel_reg(y, x; method=:ll, degree=1, bw=:cv, kernel=:gaussian)` | Local-constant, local-linear, or local-polynomial regression with CV bandwidth and SE bands |
 | [lowess](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/lowess.jl) | `lowess(y, x; f=2//3, iter=3, delta=nothing)` | Robust LOWESS smoother with span `f` and bisquare robustifying passes |
-| [KernelDensity](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct KernelDensity{T}` | Density grid, bandwidth, kernel, method, data, and observation count |
+| [KernelDensity](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct KernelDensity{T}` | Density grid and `density` vector, bandwidth, kernel, `bw_method`, data, and observation count |
 | [KernelRegression](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct KernelRegression{T}` | Sorted fit, standard errors, bandwidth, method, residual variance |
 | [LowessFit](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct LowessFit{T}` | Sorted smoothed values, span, iterations, and observation count |
 
@@ -54,7 +54,5 @@ report(kr)
 
 # See also
 
-* [Linear Regression](/cross-section/index.md) - parametric conditional means
+* [Regression (OLS, IV, and Limited Dependent Variables)](/cross-section/reg.md) - parametric conditional means
 * [Nonlinear Time Series](/nonlinear-statespace/nonlinear.md) - parametric transition-function time-series models
-* [Input-Output Analysis (IO)](/io/io.md) - structural sectoral estimation
-* [Policy Counterfactuals](/policy-counterfactuals/counterfactual.md) - model-based policy projections
