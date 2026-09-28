@@ -2,7 +2,7 @@
 type: Feature
 title: MIDAS Regression
 description: Mixed-data-sampling regression of a low-frequency target on high-frequency lags through exponential-Almon, Beta, or polynomial weights, with ADL-MIDAS, U-MIDAS, and direct forecasting.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/midas
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/midas
 tags:
   - midas
   - mixed-frequency
@@ -17,13 +17,13 @@ generated:
   at: 2026-09-25T01:16:20Z
 sources:
   - id: midas-page
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/midas.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/midas.md
     title: MIDAS Regression docs page
   - id: api-multivariate
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/api/multivariate.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/api/multivariate.md
     title: Multivariate Models API reference
   - id: src-midas
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/midas
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/midas
     title: src/midas module source
 ---
 
@@ -38,12 +38,12 @@ Alignment is positional: the last high-frequency observation anchors to the last
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_midas](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/midas/estimation.jl) | `estimate_midas(y_lf, X_hf; m, K, weights=:expalmon, p_ar=0, poly_degree=2, h=1, max_iter=500)` | Restricted MIDAS NLS, ADL-MIDAS, or U-MIDAS OLS; returns `MidasModel` |
-| [midas_weights](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/midas/types.jl) | `midas_weights(m::MidasModel)` | Realized weight curve `w(θ̂)` (length `K`, most-recent-first) |
-| [midas_weights](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/midas/types.jl) | `midas_weights(theta, K::Int; kind=:expalmon)` | Evaluate a weight function directly from parameters |
-| [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/midas/forecast.jl) | `forecast(m::MidasModel, X_new; y_lags=nothing, level=0.95)` | Direct forecast from a fresh HF block with NLS prediction interval; returns `MidasForecast` |
-| [MidasModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/midas/types.jl) | `struct MidasModel{T} <: StatsAPI.RegressionModel` | Fitted MIDAS: `beta`, `theta`, weight curve `w`, Gauss-Newton vcov, fit criteria |
-| [MidasForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/midas/types.jl) | `struct MidasForecast{T} <: AbstractForecastResult{T}` | Direct forecast with `se`, interval bounds, horizon, coverage |
+| [estimate_midas](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/midas/estimation.jl) | `estimate_midas(y_lf, X_hf; m, K, weights=:expalmon, p_ar=0, poly_degree=2, h=1, max_iter=500)` | Restricted MIDAS NLS, ADL-MIDAS, or U-MIDAS OLS; returns `MidasModel` |
+| [midas_weights](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/midas/types.jl) | `midas_weights(m::MidasModel)` | Realized weight curve `w(θ̂)` (length `K`, most-recent-first) |
+| [midas_weights](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/midas/types.jl) | `midas_weights(theta, K::Int; kind=:expalmon)` | Evaluate a weight function directly from parameters |
+| [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/midas/forecast.jl) | `forecast(m::MidasModel, X_new; y_lags=nothing, level=0.95)` | Direct forecast from a fresh HF block with NLS prediction interval; returns `MidasForecast` |
+| [MidasModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/midas/types.jl) | `struct MidasModel{T} <: StatsAPI.RegressionModel` | Fitted MIDAS: `beta`, `theta`, weight curve `w`, Gauss-Newton vcov, fit criteria |
+| [MidasForecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/midas/types.jl) | `struct MidasForecast{T} <: AbstractForecastResult{T}` | Direct forecast with `se`, interval bounds, horizon, coverage |
 
 # Examples
 

@@ -2,7 +2,7 @@
 type: Feature
 title: Cointegrating Regression (FMOLS / CCR / DOLS)
 description: Single-equation estimation of a cointegrating vector by fully-modified OLS, canonical cointegrating regression, and dynamic OLS, plus group-mean and pooled panel extensions.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/cointreg
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/cointreg
 tags:
   - cointegration
   - fmols
@@ -18,13 +18,13 @@ generated:
   at: 2026-09-25T01:16:20Z
 sources:
   - id: cointreg-page
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/cointreg.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/cointreg.md
     title: Cointegrating Regression docs page
   - id: api-multivariate
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/api/multivariate.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/api/multivariate.md
     title: Multivariate Models API reference
   - id: src-cointreg
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/cointreg
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/cointreg
     title: src/cointreg module source
 ---
 
@@ -38,11 +38,11 @@ All three build on the shared `lrcov`/`lrcov_oneside` HAC toolkit and return a `
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_cointreg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/cointreg/fmols.jl) | `estimate_cointreg(y, X; method=:fmols, trend=:const, kernel=:bartlett, bandwidth=:andrews, leads=:auto, lags=:auto, ic=:aic, dols_se=:lrv)` | Single-equation FMOLS/CCR/DOLS estimation; returns `CointRegModel` |
-| [estimate_xtcointreg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/cointreg/panel.jl) | `estimate_xtcointreg(pd::PanelData, y, xs...; method=:fmols, pooling=:group, trend=:const, kernel=:bartlett, bandwidth=:andrews, leads=:auto, lags=:auto, ic=:aic, dols_se=:lrv)` | Panel FMOLS/DOLS over a `PanelData`; returns `PanelCointRegModel` |
-| [estimate_xtcointreg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/cointreg/panel.jl) | `estimate_xtcointreg(y::AbstractVector, X, id, time; kwargs..., xnames=nothing)` | Long-format panel method with unit/time id vectors |
-| [CointRegModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/cointreg/types.jl) | `struct CointRegModel{T} <: StatsAPI.RegressionModel` | Single-equation fit: long-run coef, vcov, residuals, HAC bandwidth, `Omega`/`Lambda`/`Sigma`/`omega_uv` |
-| [PanelCointRegModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/cointreg/types.jl) | `struct PanelCointRegModel{T} <: StatsAPI.RegressionModel` | Panel fit: pooled or group-mean coef, per-unit fits, Pedroni between-dimension `t` |
+| [estimate_cointreg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/cointreg/fmols.jl) | `estimate_cointreg(y, X; method=:fmols, trend=:const, kernel=:bartlett, bandwidth=:andrews, leads=:auto, lags=:auto, ic=:aic, dols_se=:lrv)` | Single-equation FMOLS/CCR/DOLS estimation; returns `CointRegModel` |
+| [estimate_xtcointreg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/cointreg/panel.jl) | `estimate_xtcointreg(pd::PanelData, y, xs...; method=:fmols, pooling=:group, trend=:const, kernel=:bartlett, bandwidth=:andrews, leads=:auto, lags=:auto, ic=:aic, dols_se=:lrv)` | Panel FMOLS/DOLS over a `PanelData`; returns `PanelCointRegModel` |
+| [estimate_xtcointreg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/cointreg/panel.jl) | `estimate_xtcointreg(y::AbstractVector, X, id, time; kwargs..., xnames=nothing)` | Long-format panel method with unit/time id vectors |
+| [CointRegModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/cointreg/types.jl) | `struct CointRegModel{T} <: StatsAPI.RegressionModel` | Single-equation fit: long-run coef, vcov, residuals, HAC bandwidth, `Omega`/`Lambda`/`Sigma`/`omega_uv` |
+| [PanelCointRegModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/cointreg/types.jl) | `struct PanelCointRegModel{T} <: StatsAPI.RegressionModel` | Panel fit: pooled or group-mean coef, per-unit fits, Pedroni between-dimension `t` |
 
 # Examples
 

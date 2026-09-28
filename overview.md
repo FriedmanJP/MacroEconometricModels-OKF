@@ -12,13 +12,13 @@ generated:
   at: 2026-09-25T01:03:00Z
 sources:
   - id: upstream-readme
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/README.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/README.md
     title: Upstream README (feature summary and installation)
   - id: upstream-docs
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/docs/src
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/docs/src
     title: Upstream documentation pages
   - id: upstream-src
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src
     title: Upstream source tree
 ---
 

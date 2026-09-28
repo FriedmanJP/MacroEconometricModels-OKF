@@ -2,7 +2,7 @@
 type: Feature
 title: Systems of Equations (SUR and 3SLS)
 description: Joint estimation of multi-equation systems by seemingly-unrelated regressions (SUR) and three-stage least squares (3SLS).
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/system
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/system
 tags:
   - cross-section
   - systems
@@ -17,10 +17,10 @@ generated:
   at: 2026-09-25T01:30:07Z
 sources:
   - id: regression-docs
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/regression.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/regression.md
     title: Linear Regression docs page (Systems of Equations section)
   - id: src-system
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/system
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/system
     title: src/system module source
 ---
 
@@ -32,10 +32,10 @@ The `system` module jointly estimates multi-equation systems whose errors are co
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_sur](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/system/sur.jl) | `estimate_sur(eqs; iterate=false, tol=1e-8, maxiter=100, restrict=nothing, eqnames=nothing)` | Zellner SUR by FGLS; `eqs` is a vector of `(y, X)` or `(y, X, names)` tuples |
-| [estimate_3sls](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/system/threesls.jl) | `estimate_3sls(eqs, Z; instruments=:common, eqnames=nothing)` | Zellner-Theil 3SLS with `:common` or `:perequation` instruments |
-| [SURModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/system/types.jl) | `struct SURModel{T<:AbstractFloat}` | Fitted SUR: per-equation `betas`/`ses`, system `vcov_mat`, `Sigma`, `det_sigma`, `mcelroy_r2`, `loglik`, iteration flags |
-| [ThreeSLSModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/system/types.jl) | `struct ThreeSLSModel{T<:AbstractFloat}` | Fitted 3SLS: shared system fields plus `n_instruments`, but no `loglik` or iteration flags |
+| [estimate_sur](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/system/sur.jl) | `estimate_sur(eqs; iterate=false, tol=1e-8, maxiter=100, restrict=nothing, eqnames=nothing)` | Zellner SUR by FGLS; `eqs` is a vector of `(y, X)` or `(y, X, names)` tuples |
+| [estimate_3sls](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/system/threesls.jl) | `estimate_3sls(eqs, Z; instruments=:common, eqnames=nothing)` | Zellner-Theil 3SLS with `:common` or `:perequation` instruments |
+| [SURModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/system/types.jl) | `struct SURModel{T<:AbstractFloat}` | Fitted SUR: per-equation `betas`/`ses`, system `vcov_mat`, `Sigma`, `det_sigma`, `mcelroy_r2`, `loglik`, iteration flags |
+| [ThreeSLSModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/system/types.jl) | `struct ThreeSLSModel{T<:AbstractFloat}` | Fitted 3SLS: shared system fields plus `n_instruments`, but no `loglik` or iteration flags |
 
 # Examples
 

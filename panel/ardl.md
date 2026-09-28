@@ -2,7 +2,7 @@
 type: Feature
 title: ARDL, NARDL, and Panel ARDL
 description: OLS ARDL estimation with long-run multipliers, PSS bounds testing, asymmetric NARDL, and PMG/MG/DFE panel estimators.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/ardl
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/ardl
 tags:
   - ardl
   - nardl
@@ -18,10 +18,10 @@ generated:
   at: 2026-09-25T01:19:04Z
 sources:
   - id: ardl-docs
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/ardl.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/ardl.md
     title: ARDL and bounds testing documentation page
   - id: src-ardl
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/ardl
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/ardl
     title: src/ardl module source
 ---
 
@@ -37,24 +37,24 @@ The `ardl` module estimates autoregressive distributed-lag models by OLS for mix
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_ardl](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/estimation.jl) | `estimate_ardl(y::AbstractVector, X::AbstractMatrix; p=:auto, q=:auto, max_p=4, max_q=4, ic=:aic, case=3, trend=:none, xnames=nothing, yname="y")` | OLS ARDL(p,q) with optional IC lag selection |
-| [long_run](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/estimation.jl) | `long_run(m::ARDLModel)` | Long-run multipliers with delta-method SEs |
-| [long_run](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/nardl.jl) | `long_run(m::NARDLModel)` | Long-run multipliers for the partial-sum design |
-| [ecm_form](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/estimation.jl) | `ecm_form(m::ARDLModel)` | Conditional EC form: speed of adjustment and levels term |
-| [bounds_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/bounds.jl) | `bounds_test(m::ARDLModel; case=m.case, level=0.05, cv_source=:pss)` | PSS bounds F/t test for a level relationship |
-| [estimate_nardl](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/nardl.jl) | `estimate_nardl(y::AbstractVector, X::AbstractMatrix; asymmetric=:all, p=:auto, q=:auto, max_p=4, max_q=4, ic=:aic, case=3, ...)` | Asymmetric ARDL on positive/negative partial sums |
-| [symmetry_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/nardl.jl) | `symmetry_test(m::NARDLModel)` | Per-regressor long-run and short-run symmetry Wald tests |
-| [dynamic_multipliers](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/nardl.jl) | `dynamic_multipliers(m::NARDLModel, H::Int; bootstrap=true, nreps=500, level=0.95, seed=nothing, rng)` | Cumulative dynamic multipliers with bootstrap bands |
-| [estimate_pmg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/pmg.jl) | `estimate_pmg(pd::PanelData, y::Symbol, xs::Symbol...; p=1, q=1, method=:pmg, trend=:constant, maxiter=100, tol=1e-8)` | Panel ARDL: `:pmg`, `:mg`, or `:dfe` |
-| [estimate_pmg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/pmg.jl) | `estimate_pmg(y::AbstractVector, X::AbstractMatrix, id, time; xnames=nothing, yname="y", kwargs...)` | Panel ARDL from raw vectors (builds `PanelData` internally) |
-| [hausman_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/pmg.jl) | `hausman_test(efficient::PMGModel, consistent::PMGModel)` | PMG vs MG test of long-run homogeneity |
-| [ARDLModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct ARDLModel{T}` | Fitted ARDL: OLS block, lag bookkeeping, cached long-run |
-| [ARDLLongRun](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct ARDLLongRun{T}` | Long-run multipliers, SEs, denominator |
-| [ARDLBoundsTest](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct ARDLBoundsTest{T}` | Bounds F/t statistics, CV tables, decisions |
-| [NARDLModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct NARDLModel{T}` | Fitted NARDL wrapping the enlarged ARDL design |
-| [NARDLSymmetryTest](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct NARDLSymmetryTest{T}` | Long- and short-run symmetry Wald statistics |
-| [NARDLMultipliers](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct NARDLMultipliers{T}` | Cumulative multipliers with bootstrap bands |
-| [PMGModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/ardl/types.jl) | `struct PMGModel{T}` | Panel ARDL fit: common/unit long-run, speeds of adjustment |
+| [estimate_ardl](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/estimation.jl) | `estimate_ardl(y::AbstractVector, X::AbstractMatrix; p=:auto, q=:auto, max_p=4, max_q=4, ic=:aic, case=3, trend=:none, xnames=nothing, yname="y")` | OLS ARDL(p,q) with optional IC lag selection |
+| [long_run](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/estimation.jl) | `long_run(m::ARDLModel)` | Long-run multipliers with delta-method SEs |
+| [long_run](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/nardl.jl) | `long_run(m::NARDLModel)` | Long-run multipliers for the partial-sum design |
+| [ecm_form](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/estimation.jl) | `ecm_form(m::ARDLModel)` | Conditional EC form: speed of adjustment and levels term |
+| [bounds_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/bounds.jl) | `bounds_test(m::ARDLModel; case=m.case, level=0.05, cv_source=:pss)` | PSS bounds F/t test for a level relationship |
+| [estimate_nardl](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/nardl.jl) | `estimate_nardl(y::AbstractVector, X::AbstractMatrix; asymmetric=:all, p=:auto, q=:auto, max_p=4, max_q=4, ic=:aic, case=3, ...)` | Asymmetric ARDL on positive/negative partial sums |
+| [symmetry_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/nardl.jl) | `symmetry_test(m::NARDLModel)` | Per-regressor long-run and short-run symmetry Wald tests |
+| [dynamic_multipliers](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/nardl.jl) | `dynamic_multipliers(m::NARDLModel, H::Int; bootstrap=true, nreps=500, level=0.95, seed=nothing, rng)` | Cumulative dynamic multipliers with bootstrap bands |
+| [estimate_pmg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/pmg.jl) | `estimate_pmg(pd::PanelData, y::Symbol, xs::Symbol...; p=1, q=1, method=:pmg, trend=:constant, maxiter=100, tol=1e-8)` | Panel ARDL: `:pmg`, `:mg`, or `:dfe` |
+| [estimate_pmg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/pmg.jl) | `estimate_pmg(y::AbstractVector, X::AbstractMatrix, id, time; xnames=nothing, yname="y", kwargs...)` | Panel ARDL from raw vectors (builds `PanelData` internally) |
+| [hausman_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/pmg.jl) | `hausman_test(efficient::PMGModel, consistent::PMGModel)` | PMG vs MG test of long-run homogeneity |
+| [ARDLModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct ARDLModel{T}` | Fitted ARDL: OLS block, lag bookkeeping, cached long-run |
+| [ARDLLongRun](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct ARDLLongRun{T}` | Long-run multipliers, SEs, denominator |
+| [ARDLBoundsTest](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct ARDLBoundsTest{T}` | Bounds F/t statistics, CV tables, decisions |
+| [NARDLModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct NARDLModel{T}` | Fitted NARDL wrapping the enlarged ARDL design |
+| [NARDLSymmetryTest](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct NARDLSymmetryTest{T}` | Long- and short-run symmetry Wald statistics |
+| [NARDLMultipliers](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct NARDLMultipliers{T}` | Cumulative multipliers with bootstrap bands |
+| [PMGModel](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/ardl/types.jl) | `struct PMGModel{T}` | Panel ARDL fit: common/unit long-run, speeds of adjustment |
 
 # Examples
 

@@ -2,7 +2,7 @@
 type: Feature
 title: Difference-in-Differences and Event Study LP
 description: Staggered-adoption DiD with heterogeneity-robust estimators, Bacon/negative-weight diagnostics, HonestDiD sensitivity, and LP event-study estimators.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/did
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/did
 tags:
   - did
   - event-study
@@ -18,13 +18,13 @@ generated:
   at: 2026-09-25T01:19:04Z
 sources:
   - id: did-docs
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/did.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/did.md
     title: Difference-in-Differences documentation page
   - id: event-study-docs
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/event_study.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/event_study.md
     title: Event Study LP documentation page
   - id: src-did
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/did
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/did
     title: src/did module source
 ---
 
@@ -39,22 +39,22 @@ Diagnostics include the Goodman-Bacon 2x2 decomposition, a joint pre-trend Wald 
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/estimation.jl) | `estimate_did(pd::PanelData, outcome, treatment; method=:twfe, leads=0, horizon=5, control_group=:never_treated, cluster=:unit, base_period=:varying, n_boot=200, ...)` | Event-study ATTs via `:twfe` / `:callaway_santanna` / `:sun_abraham` / `:bjs` / `:did_multiplegt` |
-| [estimate_event_study_lp](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/event_study.jl) | `estimate_event_study_lp(pd::PanelData, outcome, treatment, H::Int; leads=3, lags=4, covariates=String[], cluster=:unit, conf_level=0.95)` | Horizon-by-horizon LP event study with switching indicator |
-| [estimate_lp_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/lpdid.jl) | `estimate_lp_did(pd::PanelData, outcome, treatment, H::Int; pre_window=3, ylags=0, dylags=0, nonabsorbing=nothing, oneoff=false, pmd=nothing, reweight=false, ...)` | LP-DiD with clean control samples, PMD, IPW, pooled estimates |
-| [bacon_decomposition](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/diagnostics.jl) | `bacon_decomposition(pd::PanelData, outcome, treatment)` | Goodman-Bacon 2x2 decomposition of static TWFE |
-| [pretrend_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/diagnostics.jl) | `pretrend_test(result::DIDResult)` | Joint Wald test of pre-treatment coefficients |
-| [pretrend_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/diagnostics.jl) | `pretrend_test(result::EventStudyLP)` | Pre-trend Wald test for LP event-study results |
-| [negative_weight_check](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/diagnostics.jl) | `negative_weight_check(pd::PanelData, treatment)` | dCDH check for negative TWFE weights on ATT cells |
-| [honest_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/honest_did.jl) | `honest_did(result::Union{DIDResult, EventStudyLP}; restriction=:rm, Mbar=1.0, M=0.0, conf_level=0.95)` | Rambachan-Roth robust CIs and breakdown values |
-| [honest_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/honest_did.jl) | `honest_did(betahat::AbstractVector, sigma::AbstractMatrix; num_pre, num_post, restriction=:rm, Mbar=1.0, M=0.0, l_vec=nothing, ...)` | Core HonestDiD on raw event-study coefficients + covariance |
-| [DIDResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct DIDResult{T} <: AbstractFrequentistResult` | Event-time ATTs, group-time matrix, overall ATT, `att_vcov` |
-| [EventStudyLP](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct EventStudyLP{T}` | Per-horizon LP coefficients, SEs, `T_eff` |
-| [LPDiDResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct LPDiDResult{T}` | LP-DiD coefficients with pooled estimates and CCS spec |
-| [BaconDecomposition](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct BaconDecomposition{T}` | 2x2 estimates, weights, comparison types |
-| [PretrendTestResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct PretrendTestResult{T}` | Pre-trend Wald statistic, p-value, df |
-| [NegativeWeightResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct NegativeWeightResult{T}` | TWFE weights with negative-weight flags |
-| [HonestDiDResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/did/types.jl) | `struct HonestDiDResult{T}` | Robust vs conventional CIs, breakdown value |
+| [estimate_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/estimation.jl) | `estimate_did(pd::PanelData, outcome, treatment; method=:twfe, leads=0, horizon=5, control_group=:never_treated, cluster=:unit, base_period=:varying, n_boot=200, ...)` | Event-study ATTs via `:twfe` / `:callaway_santanna` / `:sun_abraham` / `:bjs` / `:did_multiplegt` |
+| [estimate_event_study_lp](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/event_study.jl) | `estimate_event_study_lp(pd::PanelData, outcome, treatment, H::Int; leads=3, lags=4, covariates=String[], cluster=:unit, conf_level=0.95)` | Horizon-by-horizon LP event study with switching indicator |
+| [estimate_lp_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/lpdid.jl) | `estimate_lp_did(pd::PanelData, outcome, treatment, H::Int; pre_window=3, ylags=0, dylags=0, nonabsorbing=nothing, oneoff=false, pmd=nothing, reweight=false, ...)` | LP-DiD with clean control samples, PMD, IPW, pooled estimates |
+| [bacon_decomposition](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/diagnostics.jl) | `bacon_decomposition(pd::PanelData, outcome, treatment)` | Goodman-Bacon 2x2 decomposition of static TWFE |
+| [pretrend_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/diagnostics.jl) | `pretrend_test(result::DIDResult)` | Joint Wald test of pre-treatment coefficients |
+| [pretrend_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/diagnostics.jl) | `pretrend_test(result::EventStudyLP)` | Pre-trend Wald test for LP event-study results |
+| [negative_weight_check](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/diagnostics.jl) | `negative_weight_check(pd::PanelData, treatment)` | dCDH check for negative TWFE weights on ATT cells |
+| [honest_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/honest_did.jl) | `honest_did(result::Union{DIDResult, EventStudyLP}; restriction=:rm, Mbar=1.0, M=0.0, conf_level=0.95)` | Rambachan-Roth robust CIs and breakdown values |
+| [honest_did](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/honest_did.jl) | `honest_did(betahat::AbstractVector, sigma::AbstractMatrix; num_pre, num_post, restriction=:rm, Mbar=1.0, M=0.0, l_vec=nothing, ...)` | Core HonestDiD on raw event-study coefficients + covariance |
+| [DIDResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct DIDResult{T} <: AbstractFrequentistResult` | Event-time ATTs, group-time matrix, overall ATT, `att_vcov` |
+| [EventStudyLP](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct EventStudyLP{T}` | Per-horizon LP coefficients, SEs, `T_eff` |
+| [LPDiDResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct LPDiDResult{T}` | LP-DiD coefficients with pooled estimates and CCS spec |
+| [BaconDecomposition](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct BaconDecomposition{T}` | 2x2 estimates, weights, comparison types |
+| [PretrendTestResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct PretrendTestResult{T}` | Pre-trend Wald statistic, p-value, df |
+| [NegativeWeightResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct NegativeWeightResult{T}` | TWFE weights with negative-weight flags |
+| [HonestDiDResult](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/did/types.jl) | `struct HonestDiDResult{T}` | Robust vs conventional CIs, breakdown value |
 
 # Examples
 

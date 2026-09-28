@@ -2,7 +2,7 @@
 type: Feature
 title: ARCH Models
 description: Engle ARCH(q) models for time-varying conditional variance with MLE estimation and variance forecasting.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/arch
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/arch
 tags: [arch, volatility, univariate, conditional-variance]
 status: approved
 verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
@@ -12,10 +12,10 @@ generated:
   at: 2026-09-25T01:06:33Z
 sources:
   - id: upstream-docs-volatility
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/volatility.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/volatility.md
     title: Upstream Volatility Models documentation (ARCH section)
   - id: upstream-src-arch
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/arch
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/arch
     title: Upstream arch source directory
 ---
 
@@ -34,15 +34,15 @@ plotting used by the whole volatility family.
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_arch](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/estimation.jl) | `estimate_arch(y, q; method=:mle)` | Two-stage MLE of ARCH(q); returns ARCHModel |
-| [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/forecast.jl) | `forecast(m, h; conf_level=0.95, n_sim=10000, ...)` | Simulation-based multi-step variance forecasts; returns VolatilityForecast |
-| [persistence](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/types.jl) | `persistence(m)` | Volatility persistence `sum alpha` |
-| [halflife](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/types.jl) | `halflife(m)` | Shock half-life `log(0.5)/log(persistence)`; `Inf` if non-stationary |
-| [unconditional_variance](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/types.jl) | `unconditional_variance(m)` | Long-run variance `omega / (1 - sum alpha)` |
-| [arch_order](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/types.jl) | `arch_order(m)` | ARCH order q |
-| [arch_lm_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/teststat/arch_diagnostics.jl) | `arch_lm_test(y, q=5)` or `arch_lm_test(m, q=5)` | Engle ARCH-LM test on raw data or fitted-model residuals |
-| [ljung_box_squared](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/teststat/arch_diagnostics.jl) | `ljung_box_squared(z, K=10)` or `ljung_box_squared(m, K=10)` | Ljung-Box test on squared standardized residuals |
-| [StatsAPI interface](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/arch/types.jl) | `coef`, `nobs`, `residuals`, `predict`, `loglikelihood`, `aic`, `bic`, `stderror`, `vcov`, `confint` | Standard accessors (`predict` returns the conditional variance series) |
+| [estimate_arch](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/estimation.jl) | `estimate_arch(y, q; method=:mle)` | Two-stage MLE of ARCH(q); returns ARCHModel |
+| [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/forecast.jl) | `forecast(m, h; conf_level=0.95, n_sim=10000, ...)` | Simulation-based multi-step variance forecasts; returns VolatilityForecast |
+| [persistence](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/types.jl) | `persistence(m)` | Volatility persistence `sum alpha` |
+| [halflife](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/types.jl) | `halflife(m)` | Shock half-life `log(0.5)/log(persistence)`; `Inf` if non-stationary |
+| [unconditional_variance](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/types.jl) | `unconditional_variance(m)` | Long-run variance `omega / (1 - sum alpha)` |
+| [arch_order](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/types.jl) | `arch_order(m)` | ARCH order q |
+| [arch_lm_test](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/teststat/arch_diagnostics.jl) | `arch_lm_test(y, q=5)` or `arch_lm_test(m, q=5)` | Engle ARCH-LM test on raw data or fitted-model residuals |
+| [ljung_box_squared](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/teststat/arch_diagnostics.jl) | `ljung_box_squared(z, K=10)` or `ljung_box_squared(m, K=10)` | Ljung-Box test on squared standardized residuals |
+| [StatsAPI interface](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/arch/types.jl) | `coef`, `nobs`, `residuals`, `predict`, `loglikelihood`, `aic`, `bic`, `stderror`, `vcov`, `confint` | Standard accessors (`predict` returns the conditional variance series) |
 
 # Examples
 

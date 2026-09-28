@@ -6,6 +6,26 @@ description: Chronological history of changes to this OKF bundle.
 
 # Update log
 
+## 2026-09-28
+
+- Released bundle v1.0.0 (tag `v1.0.0` at `c380c3e`): 39 approved
+  `type: Feature` concepts pinned to upstream `3d12bb6c`, whose tree is
+  identical to `MacroEconometricModels.jl` v1.0.0.
+- Synced upstream v1.0.1 (plot-option and coverage release, closes
+  `#836`-`#843`, `#845`-`#849`) and re-pinned all provenance links to
+  `13e3522c` for bundle v1.0.1: `forecast(::NowcastBridge)` flat-path
+  method (`forecasting/nowcast.md`, replacing the "no bridge method
+  exists" note), new `plot_result` keywords (`conf_level`, `level`,
+  `log_scale`, `lags`, `threshold`, `bw`/`n_grid`), 52 new dispatches
+  (178 to 230 methods), the Bayesian HD `:stacked` view, and the
+  spectral linear-scale default (`infrastructure/plotting.md`), plus
+  the typed `ct_kfe` `SingularSystemError`
+  (`dsge/ct.md`). The v1.0.1 docs-only fixes (thirteen datasets,
+  StatsAPI field note, `r_bounds` docstring) were already reflected in
+  this bundle and needed no change. The three touched concepts keep
+  their 2026-09-25 human verification; re-review of the v1.0.1 deltas
+  is pending.
+
 ## 2026-09-25
 
 - Bundle initialized at the repository root as an OKF v0.2 bundle

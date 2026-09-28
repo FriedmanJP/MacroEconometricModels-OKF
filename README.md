@@ -48,7 +48,7 @@ Each domain directory has an `index.md`; each feature area has one
 
 - OKF v0.2 specification: <https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md>
 - Upstream package: <https://github.com/FriedmanJP/MacroEconometricModels.jl> (docs + docstrings),
-  pinned at commit `3d12bb6c`
+  pinned at commit `13e3522c` (upstream v1.0.1)
 
 ## License
 

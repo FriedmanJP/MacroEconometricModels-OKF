@@ -2,7 +2,7 @@
 type: Feature
 title: Stochastic Volatility
 description: Bayesian stochastic volatility models with latent AR(1) log-variance estimated by Gibbs sampling.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/sv
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/sv
 tags: [stochastic-volatility, bayesian, gibbs, volatility, univariate]
 status: approved
 verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
@@ -12,10 +12,10 @@ generated:
   at: 2026-09-25T01:06:33Z
 sources:
   - id: upstream-docs-volatility
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/volatility.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/volatility.md
     title: Upstream Volatility Models documentation (stochastic volatility section)
   - id: upstream-src-sv
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/sv
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/sv
     title: Upstream sv source directory
 ---
 
@@ -35,10 +35,10 @@ predictive simulations from the MCMC draws.
 
 | Function | Signature | Role |
 |---|---|---|
-| [estimate_sv](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/sv/estimation.jl) | `estimate_sv(y; n_samples=2000, burnin=1000, dist=:normal, leverage=false, quantile_levels=[0.025, 0.5, 0.975], seed=nothing, rng=...)` | KSC Gibbs sampler fit; returns SVModel with posterior draws |
-| [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/sv/forecast.jl) | `forecast(m, h; conf_level=0.95, rng=...)` | Posterior predictive volatility forecast; returns VolatilityForecast |
-| [persistence](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/sv/types.jl) | `persistence(m)` | Posterior mean of the log-volatility persistence `phi` |
-| [unconditional_variance](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/sv/types.jl) | `unconditional_variance(m)` | Long-run variance `exp(E[mu])` |
+| [estimate_sv](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/sv/estimation.jl) | `estimate_sv(y; n_samples=2000, burnin=1000, dist=:normal, leverage=false, quantile_levels=[0.025, 0.5, 0.975], seed=nothing, rng=...)` | KSC Gibbs sampler fit; returns SVModel with posterior draws |
+| [forecast](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/sv/forecast.jl) | `forecast(m, h; conf_level=0.95, rng=...)` | Posterior predictive volatility forecast; returns VolatilityForecast |
+| [persistence](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/sv/types.jl) | `persistence(m)` | Posterior mean of the log-volatility persistence `phi` |
+| [unconditional_variance](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/sv/types.jl) | `unconditional_variance(m)` | Long-run variance `exp(E[mu])` |
 
 # Examples
 

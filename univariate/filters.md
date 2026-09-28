@@ -2,7 +2,7 @@
 type: Feature
 title: Time Series Filters
 description: HP, Hamilton, Beveridge-Nelson, Baxter-King, and boosted HP trend-cycle decompositions.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/filters
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/filters
 tags: [filters, hp-filter, trend-cycle, business-cycle, univariate]
 status: approved
 verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
@@ -12,10 +12,10 @@ generated:
   at: 2026-09-25T01:06:33Z
 sources:
   - id: upstream-docs-filters
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/filters.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/filters.md
     title: Upstream Time Series Filters documentation
   - id: upstream-src-filters
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/filters
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/filters
     title: Upstream filters source directory
 ---
 
@@ -34,13 +34,13 @@ consuming code never needs to know which filter produced a decomposition.
 
 | Function | Signature | Role |
 |---|---|---|
-| [hp_filter](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/hp.jl) | `hp_filter(y; lambda=1600)` | Penalized-least-squares smoother; returns HPFilterResult |
-| [hamilton_filter](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/hamilton.jl) | `hamilton_filter(y; h=8, p=4)` | OLS projection filter; loses h+p-1 obs; returns HamiltonFilterResult |
-| [beveridge_nelson](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/beveridge_nelson.jl) | `beveridge_nelson(y; method=:arima, p=:auto, q=:auto, max_terms=500, cycle_order=2)` | Permanent-transitory split; returns BeveridgeNelsonResult |
-| [baxter_king](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/baxter_king.jl) | `baxter_king(y; pl=6, pu=32, K=12)` | Symmetric band-pass filter; loses K obs per end; returns BaxterKingResult |
-| [boosted_hp](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/boosted_hp.jl) | `boosted_hp(y; lambda=1600, stopping=:BIC, max_iter=100, sig_p=0.05)` | Iterated HP with data-driven stopping; returns BoostedHPResult |
-| [trend](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/types.jl) | `trend(r)` | Unified trend accessor (permanent component for Beveridge-Nelson) |
-| [cycle](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/filters/types.jl) | `cycle(r)` | Unified cycle accessor (transitory component for Beveridge-Nelson) |
+| [hp_filter](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/hp.jl) | `hp_filter(y; lambda=1600)` | Penalized-least-squares smoother; returns HPFilterResult |
+| [hamilton_filter](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/hamilton.jl) | `hamilton_filter(y; h=8, p=4)` | OLS projection filter; loses h+p-1 obs; returns HamiltonFilterResult |
+| [beveridge_nelson](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/beveridge_nelson.jl) | `beveridge_nelson(y; method=:arima, p=:auto, q=:auto, max_terms=500, cycle_order=2)` | Permanent-transitory split; returns BeveridgeNelsonResult |
+| [baxter_king](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/baxter_king.jl) | `baxter_king(y; pl=6, pu=32, K=12)` | Symmetric band-pass filter; loses K obs per end; returns BaxterKingResult |
+| [boosted_hp](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/boosted_hp.jl) | `boosted_hp(y; lambda=1600, stopping=:BIC, max_iter=100, sig_p=0.05)` | Iterated HP with data-driven stopping; returns BoostedHPResult |
+| [trend](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/types.jl) | `trend(r)` | Unified trend accessor (permanent component for Beveridge-Nelson) |
+| [cycle](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/filters/types.jl) | `cycle(r)` | Unified cycle accessor (transitory component for Beveridge-Nelson) |
 
 # Examples
 

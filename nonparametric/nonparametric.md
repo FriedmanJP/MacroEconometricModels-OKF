@@ -2,7 +2,7 @@
 type: Feature
 title: Nonparametric Regression and Density
 description: Kernel density estimation, Nadaraya-Watson and local-polynomial regression with cross-validated bandwidths, and robust LOWESS smoothing.
-resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/nonparametric
+resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/nonparametric
 tags:
   - nonparametric
   - kernel
@@ -18,10 +18,10 @@ generated:
   at: 2026-09-25T01:25:44Z
 sources:
   - id: nonparametric-docs
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/docs/src/nonparametric.md
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/docs/src/nonparametric.md
     title: Nonparametric Regression and Density docs
   - id: src-nonparametric
-    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/3d12bb6c/src/nonparametric
+    resource: https://github.com/FriedmanJP/MacroEconometricModels.jl/tree/13e3522c/src/nonparametric
     title: src/nonparametric module source
 ---
 
@@ -35,12 +35,12 @@ Results return `KernelDensity`, `KernelRegression`, and `LowessFit` objects inte
 
 | Function | Signature | Role |
 |---|---|---|
-| [kernel_density](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/density.jl) | `kernel_density(y; kernel=:gaussian, bw=:silverman, npoints=512, cut=3.0)` | Kernel density estimate with rule-of-thumb, plug-in, or user bandwidth |
-| [kernel_reg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/kernel_reg.jl) | `kernel_reg(y, x; method=:ll, degree=1, bw=:cv, kernel=:gaussian)` | Local-constant, local-linear, or local-polynomial regression with CV bandwidth and SE bands |
-| [lowess](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/lowess.jl) | `lowess(y, x; f=2//3, iter=3, delta=nothing)` | Robust LOWESS smoother with span `f` and bisquare robustifying passes |
-| [KernelDensity](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct KernelDensity{T}` | Density grid and `density` vector, bandwidth, kernel, `bw_method`, data, and observation count |
-| [KernelRegression](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct KernelRegression{T}` | Sorted fit, standard errors, bandwidth, method, residual variance |
-| [LowessFit](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/3d12bb6c/src/nonparametric/types.jl) | `struct LowessFit{T}` | Sorted smoothed values, span, iterations, and observation count |
+| [kernel_density](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/nonparametric/density.jl) | `kernel_density(y; kernel=:gaussian, bw=:silverman, npoints=512, cut=3.0)` | Kernel density estimate with rule-of-thumb, plug-in, or user bandwidth |
+| [kernel_reg](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/nonparametric/kernel_reg.jl) | `kernel_reg(y, x; method=:ll, degree=1, bw=:cv, kernel=:gaussian)` | Local-constant, local-linear, or local-polynomial regression with CV bandwidth and SE bands |
+| [lowess](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/nonparametric/lowess.jl) | `lowess(y, x; f=2//3, iter=3, delta=nothing)` | Robust LOWESS smoother with span `f` and bisquare robustifying passes |
+| [KernelDensity](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/nonparametric/types.jl) | `struct KernelDensity{T}` | Density grid and `density` vector, bandwidth, kernel, `bw_method`, data, and observation count |
+| [KernelRegression](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/nonparametric/types.jl) | `struct KernelRegression{T}` | Sorted fit, standard errors, bandwidth, method, residual variance |
+| [LowessFit](https://github.com/FriedmanJP/MacroEconometricModels.jl/blob/13e3522c/src/nonparametric/types.jl) | `struct LowessFit{T}` | Sorted smoothed values, span, iterations, and observation count |
 
 # Examples
 
