@@ -24,7 +24,7 @@ description: Chronological history of changes to this OKF bundle.
   StatsAPI field note, `r_bounds` docstring) were already reflected in
   this bundle and needed no change. The three touched concepts keep
   their 2026-09-25 human verification; re-review of the v1.0.1 deltas
-  is pending.
+  approved the same day (`verified` re-stamped on the three concepts).
 
 ## 2026-09-25
 

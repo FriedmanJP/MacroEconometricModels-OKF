@@ -10,8 +10,8 @@ tags:
   - hjb
   - hank
 status: approved
-verified: { by: human:chung9207, at: 2026-09-25T02:10:00Z }
-stale_after: 2026-12-24T00:00:00Z
+verified: { by: human:chung9207, at: 2026-09-28T16:35:34Z }
+stale_after: 2026-12-27T00:00:00Z
 generated:
   by: memecon-okf/dsge
   at: 2026-09-25T01:22:02Z
